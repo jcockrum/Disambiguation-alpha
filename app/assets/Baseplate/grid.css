@@ -1,57 +1,9 @@
 <style type='text/css'>
-.wrapper{
-   position: relative;
-   float: left;
-   left: 0px;
-   width: 1365px;
-   margin-bottom: 10px;
-   background-color: #cccccc
-}
-.left1{
-   position: relative;
-   float: left;
-   left: 5px;
-   width: 263px;
-   height: 263px;
-   background-color: #828282
-}
-.left2{
-   position: relative;
-   float: left;
-   left: 15px;
-   width: 263px;
-   height: 263px;
-   background-color: #828282
-}
-.left3{
-   position: relative;
-   float: left;
-   left: 25px;
-   width: 263px;
-   height: 263px;
-   background-color: #828282
-}
-.left4{
-   position: relative;
-   float: left;
-   left: 35px;
-   width: 263px;
-   height: 263px;
-   background-color: #828282
-}
-.left5{
-   position: relative;
-   float: left;
-   left: 45px;
-   width: 263px;
-   height: 263px;
-   background-color: #828282
-}
-body {
-   border-width: 0px;
-   padding: 0px;
-   margin: 0px;
-   font-size: 90%;
-   background-color: #e7e7de
-}
+.stacks{position:relative;float:left;left:0px;width:1365px;margin-bottom:10px;background-color:#cccccc}
+.left1{position:relative;float:left;left:5px;width:263px;height:263px;background-color:#828282}
+.left2{position:relative;float:left;left:15px;width:263px;height:263px;background-color:#828282}
+.left3{position:relative;float:left;left:25px;width:263px;height:263px;background-color:#828282}
+.left4{position:relative;float:left;left:35px;width:263px;height:263px;background-color:#828282}
+.left5{position:relative;float:left;left:45px;width:263px;height:263px;background-color:#828282}
+body{border-width:0px;padding:0px;margin:0px;font-size:90%;background-color:#e7e7de}
 </style>
