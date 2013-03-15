@@ -17,21 +17,16 @@ input{vertical-align:middle;}
 
 /* main content
 -----------------------------------------------------------------------------*/
-#middle{width:100%;padding:0 0 100px;height:1%;position:relative;}
+#middle{width:100%;padding:0 0 100px;height:1%;position:relative;background:#B5E3FF;}
 #middle:after{content:'';clear:both;display:table;}
-#container{width:100%;float:left;overflow:hidden;}
+#container{width:100%;float:left;overflow:hidden;background-color:#cccccc}
 #content{padding:0 520px 0 0;}
 
 /* Sidebar Left
 -----------------------------------------------------------------------------*/
 #sideLeft{float:left;margin-left:-500px;width:250px;position:relative;background:#B5E3FF;}
 
-
 // CSS for stacked 
-.stacks{position:relative;float:left;left:0px;width:1365px;margin-bottom:10px;background-color:#cccccc}
-.left1{position:relative;float:left;left:5px;width:263px;height:263px;background-color:#828282}
-.left2{position:relative;float:left;left:15px;width:263px;height:263px;background-color:#828282}
-.left3{position:relative;float:left;left:25px;width:263px;height:263px;background-color:#828282}
-.left4{position:relative;float:left;left:35px;width:263px;height:263px;background-color:#828282}
-.left5{position:relative;float:left;left:45px;width:263px;height:263px;background-color:#828282}
+.stacks{position:relative;float:left;left:0px;width:249px;margin-bottom:10px;background-color:#cccccc}
+.left1{position:relative;float:left;left:5px;width:248px;height:263px;background-color:#828282}
 body{border-width:0px;padding:0px;margin:0px;font-size:90%;background-color:#e7e7de}
