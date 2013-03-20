@@ -4,7 +4,7 @@
 
 
 //Layout
-*{margin:0;padding:0;}
+*{margin:1px;padding:0px;}
 html{height:100%;}
 header,nav,section,article,aside,footer{display:block;}
 body{font:12px/18px Arial,Tahoma,Verdana,sans-serif;width:100%;height:100%;}
@@ -17,10 +17,10 @@ input{vertical-align:middle;}
 
 /* main content
 -----------------------------------------------------------------------------*/
-#middle{width:100%;padding:0 0 100px;height:1%;position:relative;background:#B5E3FF;}
+#middle{width:100%;padding:0 0 10px;height:1%;position:relative;background:#B5E3FF;}
 #middle:after{content:'';clear:both;display:table;}
 #container{width:100%;float:left;overflow:hidden;background-color:#cccccc}
-#content{padding:0 520px 0 0;}
+#content{padding:25px;}
 
 /* Sidebar Left
 -----------------------------------------------------------------------------*/

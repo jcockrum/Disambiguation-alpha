@@ -1,23 +1,19 @@
 class HomeController < ApplicationController
   def index
   end
-    def index
+    def dashboard
       @universes = Universe.all
     end
     
-    def dashboard
-      
-   
-    end
     
-    private
+private
 
 
   def current_universe
-    universe.find(session[:universe_id])
+    universe.find(universe[:current_user.id])
     rescue ActiveRecord::RecordNotFound
     universe = universe.create
-    session[:universe_id] = universe.id
+    universe[:current_user.id] = universe.id
     universe
   end
     
