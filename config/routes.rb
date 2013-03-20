@@ -1,6 +1,9 @@
 Disambiguation::Application.routes.draw do
 
 
+  resources :universes
+
+
 #Authentication & Homepages  
   devise_for :users
   resources :users
