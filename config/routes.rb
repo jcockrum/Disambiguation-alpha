@@ -1,15 +1,25 @@
 Disambiguation::Application.routes.draw do
 
 
-  resources :universes
-
-
 #Authentication & Homepages  
   devise_for :users
   resources :users
-  
+
+#Site Content
+ resources :universes
+
+
+
+
+
+
+
+#Homepages
+
   authenticated :user do
-    root :to => 'home#dashboard'
+    root :to => 'universes#index'
   end
+   #match 'dashboard' => 'universe#index', :as => :dashboard
+
   root :to => "home#index"
 end
