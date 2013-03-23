@@ -12,20 +12,11 @@
 
 <% @universes.each do |universe| %>
   <tr>
-    <td><%= best_in_place universe, :name, :type => :input, :nil => "Click me to add content!" %></td>
+    <td><%= universe.name %></td>
+    <td><%= link_to 'Show', universe %></td>
+    <td><%= link_to 'Edit', edit_universe_path(universe) %></td>
     <td><%= link_to 'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-<br />
-<%= simple_form_for(@universe) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<br /><%= link_to 'New Universe', new_universe_path %>

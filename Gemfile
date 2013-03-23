@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem "mysql2", ">= 0.3.11"
 gem 'jquery-rails'
+gem "best_in_place"
 gem "twitter-bootstrap-rails"
 gem "devise", ">= 2.2.3"
 gem "cancan", ">= 1.6.8"
