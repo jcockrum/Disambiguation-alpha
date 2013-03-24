@@ -15,7 +15,8 @@
 
 
 
-header#page_header {
+header#page_header 
+{
   background-color: #A9A9F5;
   color: #fff;
   height: 100px;
@@ -26,13 +27,16 @@ header#page_header {
   a:link,
   a:hover,
   a:active,
-  a:visited {
-  color:#fef8e7;
-  text-decoration: none;
+  a:visited 
+  {
+    color:#fef8e7;
+    text-decoration: none;
   }
-  nav#utility {
-  float: right;
-  font-size: 0.8em;
+  nav#auth_menu 
+  {
+    display: inline;
+    float: right;
+    font-size: 0.8em;
   }
   #navlist li
   {
@@ -44,7 +48,8 @@ header#page_header {
 
 
 
-.content {
+.content 
+{
   background-color: #eee;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
