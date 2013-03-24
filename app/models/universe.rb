@@ -1,4 +1,7 @@
 class Universe < ActiveRecord::Base
-  belongs_to :users
-  attr_accessible :name, :users_id
+  attr_accessible :name, :user_id
+  
+  belongs_to :user
+  delegate :name, :to => :user, :prefix => true, :allow_nil => true
+  
 end

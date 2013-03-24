@@ -3,7 +3,7 @@ class UniversesController < InheritedResources::Base
     before_filter :load_sidestack
     def create
         @universe = Universe.new(params[:universe])
-        @universe.users_id = current_user.id
+        @universe.user_id = current_user.id
         if @universe.save
             redirect_to :back, :notice => "Successfully created universe."
         else

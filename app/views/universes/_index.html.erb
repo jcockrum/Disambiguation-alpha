@@ -10,16 +10,17 @@
 		<th></th>
 		<th></th>
 	</tr>
-
+	
 	<% @universes.each do |universe| %>
 	<tr>
 		<td><%= best_in_place universe, :name, :type => :input %></td>
 		<td></td>
-		<td><%= universe.users.name %></td>
+		<td><%= universe.user_name %></td>
 		<td></td>
-		<td> <%= link_to 'Show', universe %> </td>
+		<td> <%=  button_to  'Show', universe %> </td>
+		
 		<td></td>
-		<td> <%= link_to 'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td> <%=  button_to  'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	</tr>
 	<% end %>
 </table>

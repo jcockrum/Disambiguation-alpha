@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320055145) do
+ActiveRecord::Schema.define(:version => 20130319152116) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -26,12 +26,13 @@ ActiveRecord::Schema.define(:version => 20130320055145) do
 
   create_table "universes", :force => true do |t|
     t.string   "name"
+    t.integer  "user_id"
     t.integer  "users_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "universes", ["users_id"], :name => "index_universes_on_users_id"
+  add_index "universes", ["user_id"], :name => "index_universes_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

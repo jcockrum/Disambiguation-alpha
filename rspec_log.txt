@@ -1,0 +1,259 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.......*.
+
+Pending:
+  Universe add some examples to (or delete) /media/Trans/rails/disambiguation/spec/models/universe_spec.rb
+    # No reason given
+    # ./spec/models/universe_spec.rb:4
+
+Failures:
+
+  1) Universes GET /universes works! (now write some real specs)
+     Failure/Error: get universes_path
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./app/controllers/universes_controller.rb:30:in `load_sidestack'
+     # ./spec/requests/universes_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  2) UniversesController PUT update with invalid params re-renders the 'edit' template
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:140:in `block (4 levels) in <top (required)>'
+
+  3) UniversesController PUT update with invalid params assigns the universe as @universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  4) UniversesController PUT update with valid params assigns the requested universe as @universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:118:in `block (4 levels) in <top (required)>'
+
+  5) UniversesController PUT update with valid params updates the requested universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:108:in `block (4 levels) in <top (required)>'
+
+  6) UniversesController PUT update with valid params redirects to the universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:124:in `block (4 levels) in <top (required)>'
+
+  7) UniversesController GET show assigns the requested universe as @universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:47:in `block (3 levels) in <top (required)>'
+
+  8) UniversesController GET new assigns a new universe as @universe
+     Failure/Error: get :new, {}, valid_session
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./app/controllers/universes_controller.rb:30:in `load_sidestack'
+     # ./spec/controllers/universes_controller_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  9) UniversesController POST create with invalid params re-renders the 'new' template
+     Failure/Error: post :create, {:universe => { "name" => "invalid value" }}, valid_session
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./app/controllers/universes_controller.rb:30:in `load_sidestack'
+     # ./spec/controllers/universes_controller_spec.rb:99:in `block (4 levels) in <top (required)>'
+
+  10) UniversesController POST create with invalid params assigns a newly created but unsaved universe as @universe
+     Failure/Error: post :create, {:universe => { "name" => "invalid value" }}, valid_session
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./app/controllers/universes_controller.rb:30:in `load_sidestack'
+     # ./spec/controllers/universes_controller_spec.rb:92:in `block (4 levels) in <top (required)>'
+
+  11) UniversesController POST create with valid params assigns a newly created universe as @universe
+     Failure/Error: post :create, {:universe => valid_attributes}, valid_session
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./app/controllers/universes_controller.rb:30:in `load_sidestack'
+     # ./spec/controllers/universes_controller_spec.rb:77:in `block (4 levels) in <top (required)>'
+
+  12) UniversesController POST create with valid params creates a new Universe
+     Failure/Error: expect {
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:71:in `block (4 levels) in <top (required)>'
+
+  13) UniversesController POST create with valid params redirects to the created universe
+     Failure/Error: post :create, {:universe => valid_attributes}, valid_session
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./app/controllers/universes_controller.rb:30:in `load_sidestack'
+     # ./spec/controllers/universes_controller_spec.rb:83:in `block (4 levels) in <top (required)>'
+
+  14) UniversesController DELETE destroy redirects to the universes list
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:158:in `block (3 levels) in <top (required)>'
+
+  15) UniversesController DELETE destroy destroys the requested universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:151:in `block (3 levels) in <top (required)>'
+
+  16) UniversesController GET edit assigns the requested universe as @universe
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:62:in `block (3 levels) in <top (required)>'
+
+  17) UniversesController GET index assigns all universes as @universes
+     Failure/Error: universe = Universe.create! valid_attributes
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.universes' doesn't exist: SHOW FULL FIELDS FROM `universes`
+     # ./spec/controllers/universes_controller_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+  18) UsersController GET 'show' should find the right user
+     Failure/Error: @user = FactoryGirl.create(:user)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/controllers/users_controller_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  19) UsersController GET 'show' should be successful
+     Failure/Error: @user = FactoryGirl.create(:user)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/controllers/users_controller_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  20) User should reject email addresses identical up to case
+     Failure/Error: User.create!(@attr.merge(:email => upcased_email))
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:47:in `block (2 levels) in <top (required)>'
+
+  21) User should require an email address
+     Failure/Error: no_email_user = User.new(@attr.merge(:email => ""))
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:19:in `new'
+     # ./spec/models/user_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  22) User should accept valid email addresses
+     Failure/Error: valid_email_user = User.new(@attr.merge(:email => address))
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:26:in `new'
+     # ./spec/models/user_spec.rb:26:in `block (3 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:25:in `each'
+     # ./spec/models/user_spec.rb:25:in `block (2 levels) in <top (required)>'
+
+  23) User should reject duplicate email addresses
+     Failure/Error: User.create!(@attr)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:40:in `block (2 levels) in <top (required)>'
+
+  24) User should reject invalid email addresses
+     Failure/Error: invalid_email_user = User.new(@attr.merge(:email => address))
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:34:in `new'
+     # ./spec/models/user_spec.rb:34:in `block (3 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:33:in `each'
+     # ./spec/models/user_spec.rb:33:in `block (2 levels) in <top (required)>'
+
+  25) User should create a new instance given a valid attribute
+     Failure/Error: User.create!(@attr)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+  26) User password validations should require a matching password confirmation
+     Failure/Error: User.new(@attr.merge(:password_confirmation => "invalid")).
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:75:in `new'
+     # ./spec/models/user_spec.rb:75:in `block (3 levels) in <top (required)>'
+
+  27) User password validations should require a password
+     Failure/Error: User.new(@attr.merge(:password => "", :password_confirmation => "")).
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:70:in `new'
+     # ./spec/models/user_spec.rb:70:in `block (3 levels) in <top (required)>'
+
+  28) User password validations should reject short passwords
+     Failure/Error: User.new(hash).should_not be_valid
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:82:in `new'
+     # ./spec/models/user_spec.rb:82:in `block (3 levels) in <top (required)>'
+
+  29) User passwords should have a password confirmation attribute
+     Failure/Error: @user = User.new(@attr)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:55:in `new'
+     # ./spec/models/user_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  30) User passwords should have a password attribute
+     Failure/Error: @user = User.new(@attr)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:55:in `new'
+     # ./spec/models/user_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  31) User password encryption should set the encrypted password attribute
+     Failure/Error: @user = User.create!(@attr)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:90:in `block (3 levels) in <top (required)>'
+
+  32) User password encryption should have an encrypted password attribute
+     Failure/Error: @user = User.create!(@attr)
+     ActiveRecord::StatementInvalid:
+       Mysql2::Error: Table 'disambiguation_test.users' doesn't exist: SHOW FULL FIELDS FROM `users`
+     # ./spec/models/user_spec.rb:90:in `block (3 levels) in <top (required)>'
+
+Finished in 0.37841 seconds
+41 examples, 32 failures, 1 pending
+
+Failed examples:
+
+rspec ./spec/requests/universes_spec.rb:5 # Universes GET /universes works! (now write some real specs)
+rspec ./spec/controllers/universes_controller_spec.rb:139 # UniversesController PUT update with invalid params re-renders the 'edit' template
+rspec ./spec/controllers/universes_controller_spec.rb:131 # UniversesController PUT update with invalid params assigns the universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:117 # UniversesController PUT update with valid params assigns the requested universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:107 # UniversesController PUT update with valid params updates the requested universe
+rspec ./spec/controllers/universes_controller_spec.rb:123 # UniversesController PUT update with valid params redirects to the universe
+rspec ./spec/controllers/universes_controller_spec.rb:46 # UniversesController GET show assigns the requested universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:54 # UniversesController GET new assigns a new universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:96 # UniversesController POST create with invalid params re-renders the 'new' template
+rspec ./spec/controllers/universes_controller_spec.rb:89 # UniversesController POST create with invalid params assigns a newly created but unsaved universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:76 # UniversesController POST create with valid params assigns a newly created universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:70 # UniversesController POST create with valid params creates a new Universe
+rspec ./spec/controllers/universes_controller_spec.rb:82 # UniversesController POST create with valid params redirects to the created universe
+rspec ./spec/controllers/universes_controller_spec.rb:157 # UniversesController DELETE destroy redirects to the universes list
+rspec ./spec/controllers/universes_controller_spec.rb:150 # UniversesController DELETE destroy destroys the requested universe
+rspec ./spec/controllers/universes_controller_spec.rb:61 # UniversesController GET edit assigns the requested universe as @universe
+rspec ./spec/controllers/universes_controller_spec.rb:38 # UniversesController GET index assigns all universes as @universes
+rspec ./spec/controllers/users_controller_spec.rb:17 # UsersController GET 'show' should find the right user
+rspec ./spec/controllers/users_controller_spec.rb:12 # UsersController GET 'show' should be successful
+rspec ./spec/models/user_spec.rb:45 # User should reject email addresses identical up to case
+rspec ./spec/models/user_spec.rb:18 # User should require an email address
+rspec ./spec/models/user_spec.rb:23 # User should accept valid email addresses
+rspec ./spec/models/user_spec.rb:39 # User should reject duplicate email addresses
+rspec ./spec/models/user_spec.rb:31 # User should reject invalid email addresses
+rspec ./spec/models/user_spec.rb:14 # User should create a new instance given a valid attribute
+rspec ./spec/models/user_spec.rb:74 # User password validations should require a matching password confirmation
+rspec ./spec/models/user_spec.rb:69 # User password validations should require a password
+rspec ./spec/models/user_spec.rb:79 # User password validations should reject short passwords
+rspec ./spec/models/user_spec.rb:62 # User passwords should have a password confirmation attribute
+rspec ./spec/models/user_spec.rb:58 # User passwords should have a password attribute
+rspec ./spec/models/user_spec.rb:97 # User password encryption should set the encrypted password attribute
+rspec ./spec/models/user_spec.rb:93 # User password encryption should have an encrypted password attribute
+
+Randomized with seed 44373
+
