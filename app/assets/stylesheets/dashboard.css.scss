@@ -1,4 +1,4 @@
-// Place all the styles related to the Dashboard controller here.
+// Place all the styles related to the Dashboard layouts here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -17,16 +17,23 @@ input{vertical-align:middle;}
 
 /* main content
 -----------------------------------------------------------------------------*/
-#middle{width:100%;padding:0 0 10px;height:1%;position:relative;background:#B5E3FF;}
+#middle{width:100%;padding:0 0 10px;height:1%;min-height:100%;height:auto !important;height:100%;position:relative;background:#B5E3FF;}
 #middle:after{content:'';clear:both;display:table;}
-#container{width:100%;float:left;overflow:hidden;background-color:#cccccc}
-#content{padding:25px;}
+#container{width:100%;float:left;min-height:300px;overflow:hidden;background-color:#cccccc}
 
-/* Sidebar Left
+/* Sidebars
 -----------------------------------------------------------------------------*/
-#sideLeft{float:left;margin-left:-500px;width:250px;position:relative;background:#B5E3FF;}
+#single_side_right{float:right;margin-left:-75%;width:25%;position:relative;background:#B5E3FF;}
+#single_side_Left{float:left;margin-left:1px;width:25%;position:relative;background:#B5E3FF;}
+#double_side_right{float:right;margin-left:-50%;width:49%;position:relative;background:#B5E3FF;}
+#double_side_Left{float:left;margin-left:1px;width:49%;position:relative;background:#B5E3FF;}
+
 
 // CSS for stacked 
-.stacks{position:relative;float:left;left:0px;width:249px;margin-bottom:10px;background-color:#cccccc}
-.left1{position:relative;float:left;left:5px;width:248px;height:263px;background-color:#828282}
+.stacks{position:relative;float:left;left:0px;width:99%;margin-bottom:10px;background-color:#cccccc}
+.inner_stack_single{position:relative;float:left;left:5px;width:98%;height:263px;background-color:#828282}
+// for innerstacks display order is left then right
+.inner_stack_right{position:relative;float:right;left:5px;width:49%;height:263px;background-color:#828282}
+.inner_stack_left{position:relative;float:left;left:5px;width:49%;height:263px;background-color:#828282}
+
 body{border-width:0px;padding:0px;margin:0px;font-size:90%;background-color:#e7e7de}
