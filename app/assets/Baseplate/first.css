@@ -1,9 +1,51 @@
-// Place all the styles related to the Dashboard layouts here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require normalize
+ *= require_self
+ *= require_tree .
+*/
 
 
-//Layout
+
+header#page_header{background-color:#A9A9F5;color:#fff;height:100px;margin-bottom:10px;
+  overflow:hidden;padding:10px 20px;
+  a:a:link, a:hover, a:active, a:visited {;color:#fef8e7;text-decoration:none;}
+  nav#auth_menu{display:inline;font-size:.8em;}
+  #navlist li{display:inline;list-style-type:none;padding-right:20px;}
+}
+
+
+#auth_menu{list-style:none;float:right;width:150px;padding-top:35px;mine-height:125px;
+  padding-left:50px;background:url(menu_background.png) no-repeat;
+}
+#auth_menu ul{list-style:none;margin:0;padding:0;}
+#auth_menu a:link{color:#b8b8b8;font-family:Trebuchet MS;font-size:14px;height:23px;
+  display:block;text-decoration:none;padding:8px 0 0;font-weight:400;
+}
+#auth_menu a:visited{text-decoration:line-through;}
+#auth_menu a:hover{color:#595959;}
+#auth_menu a:active{color:#dbdbdb;}
+
+
+
+.content{background-color:#eee;padding:20px;margin:0 -20px;
+   /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius:0 0 6px 6px;-moz-border-radius:0 0 6px 6px;border-radius:0 0 6px 6px;
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.15);-moz-box-shadow:0 1px 2px rgba(0,0,0,.15);
+  box-shadow:0 1px 2px rgba(0,0,0,.15);
+}
+
+// Dashboard code
+
+/*Layout */
 *{margin:1px;padding:0px;}
 html{height:100%;}
 header,nav,section,article,aside,footer{display:block;}

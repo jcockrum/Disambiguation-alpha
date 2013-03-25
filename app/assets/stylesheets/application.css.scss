@@ -13,50 +13,55 @@
  *= require_tree .
 */
 
+/* Page defaults */
+*{margin:1px;padding:0;}
+a{color:blue;outline:none;text-decoration:underline;}
+a:hover{text-decoration:none;}
+body{background-color:#e7e7de;border-width:0;font:12px/18px Arial,Tahoma,Verdana,sans-serif;font-size:90%;height:100%;margin:0;padding:0;width:100%;}
+article{display:block;}
+aside{display:block;}
+footer{display:block;}
+header{display:block;}
+html{height:100%;}
+img{border:none;}
+input{vertical-align:middle;}
+p{margin:0 0 18px;}
+section{display:block;}
 
-
-header#page_header 
-{
-  background-color: #A9A9F5;
-  color: #fff;
-  height: 100px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  padding: 10px 20px;
-  a,
-  a:link,
-  a:hover,
-  a:active,
-  a:visited 
-  {
-    color:#fef8e7;
-    text-decoration: none;
-  }
-  nav#auth_menu 
-  {
-    display: inline;
-    float: right;
-    font-size: 0.8em;
-  }
-  #navlist li
-  {
-    display: inline;
-    list-style-type: none;
-    padding-right: 20px;
-  }
+/* Header*/
+header#page_header{background-color:#A9A9F5;color:#fff;overflow:hidden;
+  height:105px;margin-bottom:4px;padding:1px;
+  a:a:link, a:hover, a:active, a:visited {;color:#fef8e7;text-decoration:none;}
 }
 
 
-
-.content 
-{
-  background-color: #eee;
-  padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+// authentication menu
+nav#auth_menu{ background:url(menu_background.png) no-repeat; background-size:cover; 
+    display:inline;
 }
+#auth_menu{   
+  float:right;list-style:none; height:100px;padding-left:50px;padding-top:10;width:150px;
+}
+#auth_menu ul{list-style:none;margin:0;padding:0;}
+#auth_menu a:active{color:#dbdbdb;}
+#auth_menu a:hover{color:#595959;}
+#auth_menu a:visited{text-decoration:line-through;}
+#auth_menu a:link{color:#b8b8b8;display:block;font-family:Trebuchet MS;font-size:14px;font-weight:400;height:23px;padding:8px 0 0;text-decoration:none;}
+
+/* Main */
+#wrapper{height:auto!important;margin:0 auto;min-height:100%;width:1000px;}
+#container{background-color:#ccc;float:left;min-height:300px;overflow:hidden;width:100%;}
+.content{-moz-border-radius:0 0 6px 6px;-moz-box-shadow:0 1px 2px rgba(0,0,0,.15);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.15);background-color:#eee;border-radius:0 0 6px 6px; padding:20px;}
+#middle{background:#B5E3FF;height:auto!important;min-height:100%;padding:0 0 10px;position:relative;width:100%;}
+#middle:after{clear:both;content:'';display:table;}
+// Sidebars
+#double_side_Left{background:#B5E3FF;float:left;margin-left:1px;position:relative;width:49%;}
+#double_side_right{background:#B5E3FF;float:right;margin-left:-50%;position:relative;width:49%;}
+#single_side_Left{background:#B5E3FF;float:left;margin-left:1px;position:relative;width:25%;}
+#single_side_right{background:#B5E3FF;float:right;margin-left:-75%;position:relative;width:25%;}
+// CSS for stacks
+.stacks{background-color:#ccc;float:left;left:0;margin-bottom:10px;position:relative;width:99%;}
+// for innerstacks display order is left then right
+.inner_stack_left{background-color:#828282;float:left;height:263px;left:5px;position:relative;width:49%;}
+.inner_stack_right{background-color:#828282;float:right;height:263px;left:5px;position:relative;width:49%;}
+.inner_stack_single{background-color:#828282;float:left;height:263px;left:5px;position:relative;width:98%;}
