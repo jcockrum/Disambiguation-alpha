@@ -1,6 +1,8 @@
 class UniversesController < InheritedResources::Base
     respond_to :html, :json
     before_filter :load_sidestack
+    
+    
     def create
         @universe = Universe.new(params[:universe])
         @universe.user_id = current_user.id
@@ -29,5 +31,4 @@ class UniversesController < InheritedResources::Base
     def load_sidestack
         @users = User.all
     end
-
 end

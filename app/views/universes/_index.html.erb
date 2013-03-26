@@ -15,9 +15,9 @@
 	<tr>
 		<td><%= best_in_place universe, :name, :type => :input %></td>
 		<td></td>
-		<td><%= universe.user_name %></td>
+		<td><%= universe.user_id %></td>
 		<td></td>
-		<td> <%=  button_to  'Show', universe %> </td>
+		<td> <%=  button_to 'Show', universe %> </td>
 		
 		<td></td>
 		<td> <%=  button_to  'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
