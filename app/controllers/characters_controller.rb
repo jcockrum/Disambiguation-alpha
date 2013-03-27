@@ -4,7 +4,7 @@ class CharactersController < InheritedResources::Base
     respond_to :html, :json
     actions :index, :show, :new, :delete
     
-    def initialize_character
+    def initialize_character 
         @character = Character.new
     end
 
@@ -12,7 +12,7 @@ class CharactersController < InheritedResources::Base
         @character = Character.new(params[:character])
         @character.universe_id = current_universe.id
         if @character.save
-            redirect_to universe_charcter_path(@universe.Character, @charcter) , :notice => "Successfully created character."
+            redirect_to :back, :notice => "Successfully created character."
         else
             render :new
         end
