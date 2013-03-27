@@ -1,0 +1,17 @@
+<%= simple_form_for([@character]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :selfcontrol %>
+    <%= f.input :approach %>
+    <%= f.input :efficacy %>
+    <%= f.input :regard %>
+    <%= f.input :universe_id %>
+    <%= f.association :universe %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

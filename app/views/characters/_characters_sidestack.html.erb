@@ -1,0 +1,15 @@
+<h1>Listing characters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @characters.each do |character| %>
+  <tr>
+    <td><%= character.name %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'See All', universe_characters_path(@universe) %>
+

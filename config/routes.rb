@@ -1,15 +1,13 @@
 Disambiguation::Application.routes.draw do
 
-  
-
-
 #Authentication
     devise_for :users
     resources :users
 
     #Site Content
-    resources :universes
-    resources :characters
+    resources :universes do
+    	resources :characters	
+    end
 
     #Homepages
     authenticated :user do
