@@ -1,0 +1,29 @@
+<h1>Listing characters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Selfcontrol</th>
+    <th>Approach</th>
+    <th>Efficacy</th>
+    <th>Regard</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @characters.each do |character| %>
+  <tr>
+    <td><%= character.name %></td>
+    <td><%= character.selfcontrol %></td>
+    <td><%= character.approach %></td>
+    <td><%= character.efficacy %></td>
+    <td><%= character.regard %></td>
+    <td><%= link_to 'Show', character %></td>
+    <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= render 'form' %>
+

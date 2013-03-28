@@ -1,29 +1,43 @@
-<h1>Listing characters</h1>
+<section id="middle">
+	middle
+	<aside id="single_side_Left">
+		<strong>single_side_right</strong>
+        <div class="stacks">
+            <div class="inner_stack_single">
+                <strong> inner_stack_single 0</strong>
+					<%= render "new" %>
+                <br />
+            </div>
+            <div class="inner_stack_single">
+                <strong>inner_stack_single 1</strong>
+					<%= render "show" %>
+            </div>
+        </div>
+	</aside>	
+    <div id="single_center">
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Selfcontrol</th>
-    <th>Approach</th>
-    <th>Efficacy</th>
-    <th>Regard</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <strong> single_center: <%= @universe.name %> universe Characters</strong>
+		<%= render "index" %>
+    </div><!-- #container-->
 
-<% @characters.each do |character| %>
-  <tr>
-    <td><%= character.name %></td>
-    <td><%= character.selfcontrol %></td>
-    <td><%= character.approach %></td>
-    <td><%= character.efficacy %></td>
-    <td><%= character.regard %></td>
-    <td><%= link_to 'Show', character %></td>
-    <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-<br />
-<%= render 'form' %>
+    <aside id="single_side_right">
+        <strong>single_side_right</strong>
+        <div class="stacks">
+            <div class="inner_stack_single">
+                <strong> inner_stack_single 2</strong>
+                <p>
+                    TODO:
+                </p>
 
+                <br />
+            </div>
+            <div class="inner_stack_single">
+                <strong>inner_stack_single 3</strong>
+                <p>
+                    TODO:
+                </p>
+
+            </div>
+        </div>
+    </aside>
+</section><!-- #middle-->
