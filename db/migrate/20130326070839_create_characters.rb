@@ -2,7 +2,7 @@ class CreateCharacters < ActiveRecord::Migration
   def change
     create_table :characters do |t|
       t.string :name
-      t.string :selfcontrol
+      t.string :discipline
       t.string :approach
       t.string :efficacy
       t.string :regard

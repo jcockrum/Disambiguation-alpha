@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Selfcontrol</th>
+    <th>Discipline</th>
     <th>Approach</th>
     <th>Efficacy</th>
     <th>Regard</th>
@@ -12,10 +12,10 @@
     <th></th>
   </tr>
 
-<% for character in ([@universe, @characters]) %>
+<% for character in (@characters) %>
   <tr>
     <td><%= character.name %></td>
-    <td><%= character.selfcontrol %></td>
+    <td><%= character.discipline %></td>
     <td><%= character.approach %></td>
     <td><%= character.efficacy %></td>
     <td><%= character.regard %></td>

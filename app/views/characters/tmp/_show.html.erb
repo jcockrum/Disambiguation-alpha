@@ -1,0 +1,11 @@
+<p>Reset for Editing</p>
+
+<% for character in ([@universe, @characters]) %>
+  <tr>
+    <td><%= character.name %></td>
+    <td><%= character.discipline %></td>
+    <td><%= character.approach %></td>
+    <td><%= character.efficacy %></td>
+    <td><%= character.regard %></td>
+  </tr>
+<% end %>

@@ -1,6 +1,6 @@
 class Character < ActiveRecord::Base
     belongs_to :universe
-    attr_accessible :approach, :efficacy, :name, :regard, :selfcontrol, :universe_id
+    attr_accessible :approach, :efficacy, :name, :regard, :discipline, :universe_id
 
     def self.Willpower
         [
