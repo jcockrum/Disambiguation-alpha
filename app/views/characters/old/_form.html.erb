@@ -1,16 +1,14 @@
-<%= simple_form_for([@character]) do |f| %>
+<%= simple_form_for([@universe,@character]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :selfcontrol %>
-    <%= f.input :approach %>
-    <%= f.input :efficacy %>
-    <%= f.input :regard %>
-    <%= f.input :universe_id %>
-    <%= f.association :universe %>
+    
+    <%= f.select :discipline,  :collection => Character.Willpower%>
+    <%= f.select :approach, 	:collection => Character.Manner%>
+    <%= f.select :efficacy, 	:collection => Character.Power%>
+    <%= f.select :regard, 		:collection => Character.Shown%>
   </div>
-
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

@@ -3,12 +3,10 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Selfcontrol</th>
+    <th>Discipline</th>
     <th>Approach</th>
     <th>Efficacy</th>
     <th>Regard</th>
-    <th>Universe</th>
-    <th>Universe</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,15 +15,13 @@
 <% @characters.each do |character| %>
   <tr>
     <td><%= character.name %></td>
-    <td><%= character.selfcontrol %></td>
+    <td><%= character.discipline %></td>
     <td><%= character.approach %></td>
     <td><%= character.efficacy %></td>
     <td><%= character.regard %></td>
-    <td><%= character.universe_id %></td>
-    <td><%= character.universe %></td>
-    <td><%= link_to 'Show', character %></td>
-    <td><%= link_to 'Edit', edit_character_path(character) %></td>
-    <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', universe_character_path(@universe, character) %></td>
+    <td><%= link_to 'Edit', edit_universe_character_path(@universe, character) %></td>
+    <td><%= link_to 'Destroy', [@universe, character], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
