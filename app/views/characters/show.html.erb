@@ -1,31 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @character.name %>
-</p>
-
-<p>
-  <b>Selfcontrol:</b>
-  <%= @character.discipline %>
-</p>
-
-<p>
-  <b>Approach:</b>
-  <%= @character.approach %>
-</p>
-
-<p>
-  <b>Efficacy:</b>
-  <%= @character.efficacy %>
-</p>
-
-<p>
-  <b>Regard:</b>
-  <%= @character.regard %>
-</p>
-
-
+<p><b>Name:</b><%= @character.name %></p>
+<p><b>Selfcontrol:</b><%= @character.discipline %></p>
+<p><b>Approach:</b><%= @character.approach %></p>
+<p><b>Efficacy:</b><%= @character.efficacy %></p>
+<p><b>Regard:</b><%= @character.regard %></p>
 
 <%= link_to 'Edit', edit_universe_character_path(@universe, @character) %> |
 <%= link_to 'Back', universe_characters_path(@universe) %>
