@@ -54,16 +54,16 @@ nav#auth_menu{ background:url(menu_background.png) no-repeat; background-size:co
 .content{-moz-border-radius:0 0 6px 6px;-moz-box-shadow:0 1px 2px rgba(0,0,0,.15);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.15);background-color:#eee;border-radius:0 0 6px 6px; padding:20px;}
 #middle{background:#B5E3FF;height:auto!important;min-height:100%;padding:0 0 10px;position:relative;width:100%;}
 #middle:after{clear:both;content:'';display:table;}
-#single_center{background:#B5E3FF;float:left;margin-left:1px;position:relative;width:50%;height:560px;}
+#single_center{background:#B5E3FF;float:left;margin:1px;position:relative;width:50%;height:560px;}
 
 // Sidebars
-#double_side_Left{background:#B5E3FF;float:left;margin-left:1px;position:relative;width:49%;}
+#double_side_Left{background:#B5E3FF;float:left;margin-right:1px;position:relative;width:49%;}
 #double_side_right{background:#B5E3FF;float:right;margin-left:-50%;position:relative;width:49%;}
-#single_side_Left{background:#B5E3FF;float:left;margin-left:1px;position:relative;width:25%;}
+#single_side_Left{background:#B5E3FF;float:left;margin-right:1px;position:relative;width:25%;}
 #single_side_right{background:#B5E3FF;float:right;margin-left:-75%;position:relative;width:25%;}
 // CSS for stacks
 .stacks{background-color:#ccc;float:left;left:0;margin-bottom:10px;position:relative;width:99%;}
 // for innerstacks display order is left then right
-.inner_stack_left{background-color:#828282;float:left;height:263px;left:5px;position:relative;width:49%;}
+.inner_stack_left{background-color:#828282;float:left;height:263px;right:5px;position:relative;width:49%;}
 .inner_stack_right{background-color:#828282;float:right;height:263px;left:5px;position:relative;width:49%;}
-.inner_stack_single{background-color:#828282;float:left;height:263px;left:5px;position:relative;width:98%;}
+.inner_stack_single{background-color:#828282;float:left;height:263px;left:1px;position:relative;width:98%;}

@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Discipline</th>
+    <th>Approach</th>
+    <th>Efficacy</th>
+    <th>Regard</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @characters.each do |character| %>
+  <tr>
+  	<td><%= link_to character.name, :character_id => character %></td>
+    <td><%= character.discipline %></td>
+    <td><%= character.approach %></td>
+    <td><%= character.efficacy %></td>
+    <td><%= character.regard %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<p><%= link_to "New Character", new_universe_character_path(@universe) %></p>
