@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @storyarc.name %>
+</p>
+
+<p>
+  <b>Universe:</b>
+  <%= @storyarc.universe_id %>
+</p>
+
+<p>
+  <b>Universe:</b>
+  <%= @storyarc.universe %>
+</p>
+
+
+<%= link_to 'Edit', edit_storyarc_path(@storyarc) %> |
+<%= link_to 'Back', storyarcs_path %>

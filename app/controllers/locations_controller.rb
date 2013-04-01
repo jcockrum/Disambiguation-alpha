@@ -1,8 +1,7 @@
 class LocationsController < InheritedResources::Base
-	belongs_to :universe
+ 	belongs_to :universe
     respond_to :html, :json
-    
-       actions :index, :new, :create, :update, :destroy
+    actions :index, :new, :create, :update, :destroy
        
     def index
         @universe = Universe.find(params[:universe_id])
@@ -27,10 +26,5 @@ class LocationsController < InheritedResources::Base
                 format.json { respond_with_bip(@location) }
             end
         end
-    end
-    
-    
-    
-    
-    
+    end  
 end

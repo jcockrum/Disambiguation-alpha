@@ -1,0 +1,27 @@
+<h1>Listing storyarcs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Universe</th>
+    <th>Universe</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @storyarcs.each do |storyarc| %>
+  <tr>
+    <td><%= storyarc.name %></td>
+    <td><%= storyarc.universe_id %></td>
+    <td><%= storyarc.universe %></td>
+    <td><%= link_to 'Show', storyarc %></td>
+    <td><%= link_to 'Edit', edit_storyarc_path(storyarc) %></td>
+    <td><%= link_to 'Destroy', storyarc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Storyarc', new_storyarc_path %>

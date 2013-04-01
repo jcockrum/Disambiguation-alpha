@@ -1,0 +1,2 @@
+module StoryarcsHelper
+end

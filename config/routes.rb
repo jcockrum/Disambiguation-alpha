@@ -1,8 +1,5 @@
 Disambiguation::Application.routes.draw do
 
-  
-
-
 #Authentication
     devise_for :users
     resources :users
@@ -10,7 +7,8 @@ Disambiguation::Application.routes.draw do
     #Site Content
     resources :universes do
     	resources :characters
-    	resources :locations	
+    	resources :locations
+    	resources :storyarcs	
     end
 
     #Homepages
