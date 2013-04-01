@@ -2,7 +2,7 @@ class UniversesController < InheritedResources::Base
     respond_to :html, :json
     before_filter :load_sidestack
     
-    actions :index, :show, :new, :delete
+    actions :index, :show, :new, :destroy
 
     def create
         @universe = Universe.new(params[:universe])

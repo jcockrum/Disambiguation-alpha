@@ -1,16 +1,32 @@
 class CharactersController < InheritedResources::Base
-    #before_filter :initialize_character
     belongs_to :universe
-    #respond_to :html, :json
-    #actions :index, :new, :create, :delete
+    respond_to :html, :json
+
+	actions :new, :destroy
 
     def index
-        index! @character = Character.find(params[:character_id]) if params[:character_id]
+        @universe = Universe.find(params[:universe_id])
+        @characters = @universe.characters
+        @character = Character.find(params[:character_id]) if params[:character_id]
     end
 
-    protected
+    def create
+	    super do |format|
+	      format.html { redirect_to universe_characters_url }
+	    end
+	end
 
-    def begin_of_association_chain
-        @universe
+    def update
+        @character = Character.find params[:id]
+        respond_to do |format|
+            if @character.update_attributes(params[:character])
+                format.html { redirect_to(universe_characters_url , :notice => 'character was successfully updated.') }
+                format.json { respond_with_bip(@character) }
+            else
+                format.html { render :action => "edit" }
+                format.json { respond_with_bip(@character) }
+            end
+        end
     end
+
 end

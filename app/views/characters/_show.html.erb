@@ -1,14 +1,19 @@
 <div id="character_details">
-  <h3><%= @character.name %></h3>
+  <h3>Edit: <%= @character.name %></h3>
   <dl>
-    <dt>Name: </dt><dd><%=  @character.name %></dd>
-	<dt> control: </d<dd><%= @character.discipline %></dd>
-	<dt>Approach: </dt><dd><%= @character.approach %></dd>
-	<dt>Efficacy: </dt><dd><%= @character.efficacy %></dd>
-	<dt>Regard: </dt><dd><%= @character.regard %></dd>
+    <dt>Name: </dt><dd><%= best_in_place [@universe, @character], :name, :type => :input %></dd>
+	<dt> Control: </d<dd> <%= best_in_place [@universe, @character], 
+					:discipline, :type => :select, :collection => Character.Willpower%></dd>
+	<dt> Approach: </d<dd> <%= best_in_place [@universe, @character], 
+					:approach, :type => :select, :collection => Character.Manner%></dd>
+	<dt> Efficacy: </d<dd> <%= best_in_place [@universe, @character], 
+					:efficacy, :type => :select, :collection => Character.Power%></dd>
+	<dt> Regard: </d<dd> <%= best_in_place [@universe, @character], 
+					:regard, :type => :select, :collection => Character.Shown%></dd>
   </dl>
   <p class="actions">
-    <td><%= link_to 'Edit', edit_universe_character_path(@universe, @character) %></td>
-	<td><%= link_to 'Destroy', [@universe, @character], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  	<!--for some reason, when 'save' is enabled a empty charater is created -->
+  	<!--<%= button_to 'Save', universe_characters_path(@universe) %>-->
+	<%= button_to 'Destroy', [@universe, @character], method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
 </div>
