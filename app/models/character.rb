@@ -2,6 +2,9 @@ class Character < ActiveRecord::Base
     belongs_to :universe
     attr_accessible :approach, :efficacy, :name, :regard, :discipline, :universe_id
 
+
+	#add logic to make virture or vice pairs: eg Frugality or Debauchery
+	#Fix the tenses
     def self.Willpower
         [
         	['Temperance', 'Temperance'], 

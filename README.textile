@@ -1,13 +1,14 @@
 h1. Disambiguation
 
-This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.com/.
+This is a tool for generating and testing stories to elevate creative world building into a systematic process.
 
 h2. Ruby on Rails
 
-This application requires:
-
+This application uses:
 * Ruby version 1.9.3
 * Rails version 3.2.12
+This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.com/.
+
 
 h2. Database
 
