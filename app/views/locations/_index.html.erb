@@ -1,0 +1,21 @@
+<h1><h1>locations in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
+</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @locations.each do |location| %>
+  <tr>
+    <td><%= best_in_place [@universe, location], :name, :type => :input%></td>
+    <td><%= link_to "Details",  :location_id => location %></td>
+    <td><%= button_to 'Destroy', [@universe, location], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= render 'form' , :locals =>  {:location => @location} %>

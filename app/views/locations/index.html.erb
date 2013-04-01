@@ -1,23 +1,32 @@
-<h1><h1>locations in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
-</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @locations.each do |location| %>
-  <tr>
-    <td><%= location.name %></td>
-    <td><%= link_to 'Show', universe_location_path(@universe, location) %></td>
-    <td><%= link_to 'Edit', edit_universe_location_path(@universe, location) %></td>
-    <td><%= link_to 'Destroy', [@universe, location], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Location', new_universe_location_path %>
+<section id="middle">
+    <div id="container">
+        <strong> Center Content:</strong>
+        <%= render 'index' %>
+    </div><!-- #container-->
+    <aside id="double_side_right">
+        <strong> Side</strong>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 0</strong>
+                	<h3>Details</h3>
+	                <% if @location %>
+						<p>most recent event discription for <%=@location.name%></p>
+					<% end %>
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 1</strong>
+                location => events
+                <p></p>
+            </div>
+        </div>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 2</strong>
+                location => scenes
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 3</strong>
+				character => events
+            </div>
+    </aside><!-- #sideLeft -->
+</section><!-- #middle-->
