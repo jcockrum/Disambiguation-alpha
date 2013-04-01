@@ -1,0 +1,9 @@
+<h2>Story <%= @story.name %> in the <%=  link_to @storyarc.name, @storyarc, :method => :get %> Story Arc</h2>
+
+<p>
+  <b>Name:</b>
+  <%= @story.name %>
+</p>
+
+<%= link_to 'Edit', edit_storyarc_story_path(@storyarc, @story)%> |
+<%= link_to 'Back', storyarc_stories_path(@storyarc) %>

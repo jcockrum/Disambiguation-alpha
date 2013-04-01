@@ -1,5 +1,8 @@
 Disambiguation::Application.routes.draw do
 
+
+
+
 #Authentication
     devise_for :users
     resources :users
@@ -10,6 +13,10 @@ Disambiguation::Application.routes.draw do
     	resources :locations
     	resources :storyarcs	
     end
+    
+	resources :storyarcs do
+	  resources :stories
+	end
 
     #Homepages
     authenticated :user do
