@@ -1,6 +1,6 @@
 Disambiguation::Application.routes.draw do
 
-  resources :locations
+  
 
 
 #Authentication
@@ -9,7 +9,8 @@ Disambiguation::Application.routes.draw do
 
     #Site Content
     resources :universes do
-    	resources :characters	
+    	resources :characters
+    	resources :locations	
     end
 
     #Homepages

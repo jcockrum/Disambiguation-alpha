@@ -1,0 +1,10 @@
+<h1><%= link_to 'Locations', universe_locations_path(@universe) %></h1>
+
+<table>
+    <tr> <th>Name</th> </tr>
+
+    <% @universe.locations.each do |location| %>
+    	<tr> <td><%= location.name %></td> </tr>
+    <% end %>
+</table>
+
