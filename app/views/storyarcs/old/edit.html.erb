@@ -1,6 +1,6 @@
-<h1>Editing storyarc</h1>
+<h1>Editing Storyarc <%= @storyarc.name%></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @storyarc %> |
-<%= link_to 'Back', storyarcs_path %>
+<%= link_to 'Show', universe_storyarc_path(@universe, @storyarc) %> |
+<%= link_to 'Back', universe_storyarcs_path(@universe) %>

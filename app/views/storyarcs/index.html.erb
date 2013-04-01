@@ -1,21 +1,33 @@
-<h1><h1>Storyarcs in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @storyarcs.each do |storyarc| %>
-  <tr>
-    <td><%= storyarc.name %></td>
-    <td><%= link_to 'Show', universe_storyarc_path(@universe, storyarc) %></td>
-    <td><%= link_to 'Edit', edit_universe_storyarc_path(@universe, storyarc) %></td>
-    <td><%= link_to 'Destroy', [@universe, storyarc], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
-</tr>
-<% end %>
-</table>
-<br />
-<%= link_to 'New storyarc', new_universe_storyarc_path %>
+<section id="middle">
+    <div id="container">
+        <strong> Center Content:</strong>
+        <%= render 'index' %>
+    </div><!-- #container-->
+    <aside id="double_side_right">
+        <strong> Side</strong>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 0</strong>
+                	<h3>Details</h3>
+	                <% if @storyarc %>
+						<p>lists acts and chapters for <%=@storyarc.name%></p>
+					<% end %>
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 1</strong>
+                storyarc => scenes
+                <p></p>
+            </div>
+        </div>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 2</strong>
+                storyarc => characters
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 3</strong>
+				don't know
+            </div>
+    </aside><!-- #sideLeft -->
+</section><!-- #middle-->

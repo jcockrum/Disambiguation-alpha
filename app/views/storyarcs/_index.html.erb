@@ -1,0 +1,19 @@
+<h1>Storyarcs in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @storyarcs.each do |storyarc| %>
+  <tr>
+    <td><%= best_in_place [@universe, storyarc], :name, :type => :input%></td>
+    <td><%= link_to "Details",  :storyarc_id => storyarc %></td>
+    <td><%= button_to 'Destroy', [@universe, storyarc], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
+<% end %>
+</table>
+<br />
+<%= render 'form' , :locals =>  {:storyarc => @storyarc} %>

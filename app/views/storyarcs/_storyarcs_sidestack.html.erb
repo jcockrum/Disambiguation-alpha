@@ -1,0 +1,9 @@
+<h1><%= link_to 'Story Arcs', universe_storyarcs_path(@universe) %></h1>
+
+<table>
+    <tr> <th>Name</th> </tr>
+    <% @universe.storyarcs.each do |storyarc| %>
+    	<tr> <td><%= storyarc.name %></td> </tr>
+    <% end %>
+</table>
+

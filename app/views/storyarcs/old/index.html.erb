@@ -1,10 +1,8 @@
-<h1>Listing storyarcs</h1>
+<h1><h1>Storyarcs in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Universe</th>
-    <th>Universe</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,15 +11,11 @@
 <% @storyarcs.each do |storyarc| %>
   <tr>
     <td><%= storyarc.name %></td>
-    <td><%= storyarc.universe_id %></td>
-    <td><%= storyarc.universe %></td>
-    <td><%= link_to 'Show', storyarc %></td>
-    <td><%= link_to 'Edit', edit_storyarc_path(storyarc) %></td>
-    <td><%= link_to 'Destroy', storyarc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <td><%= link_to 'Show', universe_storyarc_path(@universe, storyarc) %></td>
+    <td><%= link_to 'Edit', edit_universe_storyarc_path(@universe, storyarc) %></td>
+    <td><%= link_to 'Destroy', [@universe, storyarc], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
+</tr>
 <% end %>
 </table>
-
 <br />
-
-<%= link_to 'New Storyarc', new_storyarc_path %>
+<%= link_to 'New storyarc', new_universe_storyarc_path %>

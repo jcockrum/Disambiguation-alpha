@@ -5,16 +5,5 @@
   <%= @storyarc.name %>
 </p>
 
-<p>
-  <b>Universe:</b>
-  <%= @storyarc.universe_id %>
-</p>
-
-<p>
-  <b>Universe:</b>
-  <%= @storyarc.universe %>
-</p>
-
-
-<%= link_to 'Edit', edit_storyarc_path(@storyarc) %> |
-<%= link_to 'Back', storyarcs_path %>
+<%= link_to 'Edit', edit_universe_storyarc_path(@universe, @storyarc) %> |
+<%= link_to 'Back', universe_storyarcs_path(@universe) %>
