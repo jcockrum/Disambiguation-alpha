@@ -1,5 +1,8 @@
 Disambiguation::Application.routes.draw do
 
+  resources :locations
+
+
 #Authentication
     devise_for :users
     resources :users
