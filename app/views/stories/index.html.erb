@@ -1,21 +1,29 @@
-<h1>Stories in the <%=  link_to @storyarc.name, universe_storyarcs_path(@storyarc.universe.id), :method => :get %> Story Arc</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<%  @stories.each do |story| %>
-  <tr>
-    <td><%= story.name %></td>
-    <td><%= link_to 'Show', story_path(story) %></td>
-    <td><%= link_to 'Edit', edit_storyarc_story_path(@storyarc, story) %></td>
-    <td><%= link_to 'Destroy', [@storyarc, story], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
-</tr>
-<% end %>
-</table>
-<br />
-<%= link_to 'New stories', new_storyarc_story_path %>
+<section id="middle">
+    <div id="container">
+        <strong> Center Content:</strong>
+        <%= render 'index' %>
+    </div><!-- #container-->
+    <aside id="double_side_right">
+        <strong> Side</strong>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 0</strong>
+                	<h3>comments/details</h3>
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 1</strong>
+                location => events
+                <p></p>
+            </div>
+        </div>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 2</strong>
+                
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 3</strong>
+				
+            </div>
+    </aside>
+</section>
