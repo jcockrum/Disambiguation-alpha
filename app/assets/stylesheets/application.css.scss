@@ -61,9 +61,16 @@ nav#auth_menu{ background:url(menu_background.png) no-repeat; background-size:co
 #double_side_right{background:#B5E3FF;float:right;margin-left:-50%;position:relative;width:49%;}
 #single_side_Left{background:#B5E3FF;float:left;margin-right:1px;position:relative;width:25%;}
 #single_side_right{background:#B5E3FF;float:right;margin-left:-75%;position:relative;width:25%;}
+
 // CSS for stacks
 .stacks{background-color:#ccc;float:left;left:0;margin-bottom:10px;position:relative;width:99%;}
 // for innerstacks display order is left then right
 .inner_stack_left{background-color:#828282;float:left;height:263px;right:5px;position:relative;width:49%;}
 .inner_stack_right{background-color:#828282;float:right;height:263px;left:5px;position:relative;width:49%;}
 .inner_stack_single{background-color:#828282;float:left;height:263px;left:1px;position:relative;width:98%;}
+
+//TODO: make real CSS for Tables
+// Temp css for tables
+table,td,th{border:1px solid #000;}
+th{width:160px;height:25px;}
+td{text-align:center;}  
