@@ -1,20 +1,26 @@
 class CharactersController < InheritedResources::Base
-    belongs_to :universe
     respond_to :html, :json
 
-	#TODO:  add before_filter for assocation loading
-	
     def index
         @universe = Universe.find(params[:universe_id])
         @characters = @universe.characters
-        @character = Character.find(params[:character_id]) if params[:character_id]
+    end
+
+    def new
+		@universe = Universe.find(params[:universe_id])
+		@character = @universe.character.build
     end
 
     def create
-	    super do |format|
-	      format.html { redirect_to universe_characters_url }
+        @universe = Universe.find(params[:universe_id])
+	    @character = @universe.characters.build(params[:character])
+	    if @character.save
+	      flash[:notice] = "Successfully created character."
+	      redirect_to universe_characters_url
+	    else
+	      render :action => 'new'
 	    end
-	end
+    end
 
     def update
         @character = Character.find params[:id]
@@ -28,5 +34,12 @@ class CharactersController < InheritedResources::Base
             end
         end
     end
+
+    def destroy
+	    @character = Character.find(params[:id])
+	    @character.destroy
+	    flash[:notice] = "Successfully destroyed character."
+	    redirect_to :back
+	end
 
 end

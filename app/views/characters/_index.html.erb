@@ -1,27 +1,34 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Discipline</th>
-    <th>Approach</th>
-    <th>Efficacy</th>
-    <th>Regard</th>
+    <th>Reactions filter </th>
+    <th>Approach twards </th>
+    <th>Efficacy </th>
+    <th>Regard of others </th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+<% #todo plurlize collections %>
 <% @characters.each do |character| %>
   <tr>
-  	<td><%= link_to character.name,:character_id => character %></td>
-    <td><%= character.discipline %></td>
-    <td><%= character.approach %></td>
-    <td><%= character.efficacy %></td>
-    <td><%= character.regard %></td>
+	<td><%= best_in_place [character], :name, :type => :input %></td>
+	<td><%= best_in_place [character], :discipline, :type => :select, :collection => Character.Willpower%></td>
+	<td><%= best_in_place [character], :approach, :type => :select, :collection => Character.Manner%></td>
+	<td><%= best_in_place [character], :efficacy, :type => :select, :collection => Character.Power%></td>
+	<td><%= best_in_place [character], :regard, :type => :select, :collection => Character.Shown%></td>
+	<td><%= button_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ 
   </tr>
 <% end %>
 </table>
-<br />
 
+
+
+
+
+<br />
+<%= render 'form' , :locals =>  {:character => @character} %>
 
 
 

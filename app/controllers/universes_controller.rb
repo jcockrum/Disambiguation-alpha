@@ -1,9 +1,12 @@
 class UniversesController < InheritedResources::Base
     respond_to :html, :json
     before_filter :load_sidestack
-    
-    actions :index, :show, :new, :destroy
-
+	#TODO: add width for best in place
+	#TODO: change the universe.id to user.name
+	#TODO: add logic to not show owner
+    #TODO: 'add colab' not programed
+    #TODO: add auth to not show this to non author
+                 
     def create
         @universe = Universe.new(params[:universe])
         @universe.user_id = current_user.id

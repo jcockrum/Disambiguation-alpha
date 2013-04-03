@@ -5,7 +5,7 @@ Disambiguation::Application.routes.draw do
     resources :users
 
     #Site Content
-    resources :universes :shallow => :true do
+    resources :universes, :shallow => true do
         resources :characters
         resources :locations
         resources :storyarcs do

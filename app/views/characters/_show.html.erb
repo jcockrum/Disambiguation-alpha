@@ -12,8 +12,6 @@
 					:regard, :type => :select, :collection => Character.Shown%></dd>
   </dl>
   <p class="actions">
-  	<!--for some reason, when 'save' is enabled a empty charater is created -->
-  	<!--<%= button_to 'Save', universe_characters_path(@universe) %>-->
-	<%= button_to 'Destroy', [@universe, @character], method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= button_to 'Destroy', @character, method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
 </div>

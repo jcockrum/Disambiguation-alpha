@@ -1,39 +1,34 @@
 <section id="middle">
-	middle
 	<aside id="single_side_Left">
 		<strong>single_side_right</strong>
         <div class="stacks">
             <div class="inner_stack_single">
                 <strong> inner_stack_single 0</strong>
-                <% if @character %>
-					<%= render 'show' %>
-				<% end %>
+                	<%= render 'locations/locations_sidestack' %>
             </div>
             <div class="inner_stack_single">
                 <strong>inner_stack_single 1</strong>
-				<%= render 'form' , :locals =>  {:character => @character} %>
+                	<%= render 'storyarcs/storyarcs_sidestack' %>
             </div>
         </div>
 	</aside>
 		
     <div id="single_center">
-
         <strong> single_center:</strong>
         <h1>Characters in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
 		<%= render "index" %>
     </div>
-
-    <aside id="single_side_right">
-        <strong>single_side_right</strong>
-        <div class="stacks">
-            <div class="inner_stack_single">
-                <strong> inner_stack_single 2</strong>
-				<%= render 'characters/characters_sidestack' %>
-            </div>
-            <div class="inner_stack_single">
-                <strong>inner_stack_single 3</strong>
-				<%= render 'locations/locations_sidestack' %>
-            </div>
-        </div>
-    </aside>
+	
+	<fieldset id="single_side_right">
+	<legend>Section for  comment/tags</legend>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		<p>inputs, etc</p>
+		 
+	</fieldset>
 </section><!-- #middle-->
