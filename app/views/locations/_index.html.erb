@@ -5,14 +5,12 @@
   <tr>
     <th>Name</th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @locations.each do |location| %>
   <tr>
-    <td><%= best_in_place [@universe, location], :name, :type => :input%></td>
-    <td><%= link_to "Details",  :location_id => location %></td>
-    <td><%= button_to 'Destroy', [@universe, location], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
+    <td><%= best_in_place location, :name, :type => :input%></td>
+    <td><%= button_to 'Destroy',location, method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
 <% end %>
 </table>
 

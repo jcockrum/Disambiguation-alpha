@@ -8,10 +8,7 @@
         <div class="stacks">
             <div class="inner_stack_left">
                 <strong> Stack 0</strong>
-                	<h3>Details</h3>
-	                <% if @location %>
-						<p>most recent event discription for <%=@location.name%></p>
-					<% end %>
+                	<h3>comments/details</h3>
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 1</strong>
@@ -22,11 +19,11 @@
         <div class="stacks">
             <div class="inner_stack_left">
                 <strong> Stack 2</strong>
-                location => scenes
+                <%= render 'storyarcs/storyarcs_sidestack' %>
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 3</strong>
-				character => events
+				<%= render 'characters/characters_sidestack' %>
             </div>
-    </aside><!-- #sideLeft -->
-</section><!-- #middle-->
+    </aside>
+</section>
