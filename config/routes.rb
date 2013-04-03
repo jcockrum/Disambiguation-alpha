@@ -1,8 +1,5 @@
 Disambiguation::Application.routes.draw do
 
-  
-
-
 #Authentication
     devise_for :users
     resources :users
@@ -11,7 +8,9 @@ Disambiguation::Application.routes.draw do
     resources :universes, :shallow => true do
         resources :characters
         resources :locations do
-        	resources :events
+        	resources :events do
+        		resources :societies
+        	end
         end
         resources :storyarcs do
             resources :stories

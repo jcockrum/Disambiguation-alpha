@@ -12,7 +12,13 @@
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 1</strong>
-                location => events
+                	<h3>Event Societies</h3>
+                	<table>
+						<tr><th>Name</th></tr>
+						<% @events.each do |event| %>
+						  <tr><td><%= link_to event.name, event_societies_path(event)%></td></tr>
+						<% end %>
+					</table>
                 <p></p>
             </div>
         </div>
