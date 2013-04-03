@@ -1,6 +1,6 @@
 Disambiguation::Application.routes.draw do
 
-  resources :events
+  
 
 
 #Authentication
@@ -10,7 +10,9 @@ Disambiguation::Application.routes.draw do
     #Site Content
     resources :universes, :shallow => true do
         resources :characters
-        resources :locations
+        resources :locations do
+        	resources :events
+        end
         resources :storyarcs do
             resources :stories
         end

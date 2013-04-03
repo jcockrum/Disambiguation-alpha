@@ -1,27 +1,29 @@
-<h1>Listing events</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Location</th>
-    <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.location_id %></td>
-    <td><%= event.location %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Event', new_event_path %>
+<section id="middle">
+    <div id="container">
+        <strong> Center Content:</strong>
+        <%= render 'index' %>
+    </div><!-- #container-->
+    <aside id="double_side_right">
+        <strong> Side</strong>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 0</strong>
+                	<h3>comments/details</h3>
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 1</strong>
+                location => events
+                <p></p>
+            </div>
+        </div>
+        <div class="stacks">
+            <div class="inner_stack_left">
+                <strong> Stack 2</strong>
+                
+            </div>
+            <div class="inner_stack_right">
+                <strong> Stack 3</strong>
+				
+            </div>
+    </aside>
+</section>
