@@ -3,30 +3,26 @@
     <div id="container">
         <strong> Center Content:</strong>
         <%= render 'index' %>
-    </div><!-- #container-->
+    </div>
     <aside id="double_side_right">
         <strong> Side</strong>
         <div class="stacks">
             <div class="inner_stack_left">
                 <strong> Stack 0</strong>
-                	<h3>Details</h3>
-	                <% if @storyarc %>
-						<p>lists acts and chapters for <%=@storyarc.name%></p>
-					<% end %>
+
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 1</strong>
-                <%= render 'stories/stories_sidestack' %>
             </div>
         </div>
         <div class="stacks">
             <div class="inner_stack_left">
                 <strong> Stack 2</strong>
-                storyarc => characters
+                <%= render 'characters/characters_sidestack' %>
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 3</strong>
-				storyarc => scenes
+				<%= render 'locations/locations_sidestack' %>
             </div>
-    </aside><!-- #sideLeft -->
-</section><!-- #middle-->
+    </aside>
+</section>
