@@ -1,12 +1,14 @@
 class StoryarcsController < InheritedResources::Base
     belongs_to :universe
     respond_to :html, :json
-    #actions :index, :new, :create, :update, :destroy
-    def index
-        @universe = Universe.find(params[:universe_id])
-        @storyarcs = @universe.storyarcs
-        @storyarc = Storyarc.find(params[:storyarc_id]) if params[:storyarc_id]
-    end
+    before_filter :access_externals
+    #TODO: check that :access_externals does not crash on empty set
+
+	def index
+		@storyarcs = @universe.storyarcs		
+    	@storyarc = Storyarc.find(params[:storyarc_id]) if params[:storyarc_id]
+	end
+
 
     def create
         super do |format|
@@ -14,6 +16,7 @@ class StoryarcsController < InheritedResources::Base
         end
     end
 
+    #TODO: storyarc is not updateing
     def update
         @storyarc = storyarc.find(params[:id])
         respond_to do |format|
@@ -25,5 +28,12 @@ class StoryarcsController < InheritedResources::Base
                 format.json { respond_with_bip(@storyarc) }
             end
         end
+    end
+
+    private
+
+    def access_externals
+        @universe = Universe.find(params[:universe_id])
+        @storyarc = Storyarc.find(:first)
     end
 end

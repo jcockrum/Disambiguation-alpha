@@ -31,6 +31,5 @@ class UniversesController < InheritedResources::Base
 
     def load_sidestack
         @users = User.all
-        @characters = Character.all
     end
 end

@@ -12,6 +12,7 @@ module ApplicationHelper
     html.html_safe
   end
   
-    
-
+#TODO:  add title code
+#TODO:  add css for tables
+#TODO:  add pjax after html is done
 end

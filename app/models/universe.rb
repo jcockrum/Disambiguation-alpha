@@ -4,6 +4,4 @@ class Universe < ActiveRecord::Base
     has_many :locations
     has_many :storyarcs
 
-    #delegate :name, :to => @user, :prefix => true, :allow_nil => true
-
 end

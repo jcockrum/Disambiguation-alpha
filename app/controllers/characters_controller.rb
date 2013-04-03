@@ -2,8 +2,8 @@ class CharactersController < InheritedResources::Base
     belongs_to :universe
     respond_to :html, :json
 
-	actions :new, :destroy
-
+	#TODO:  add before_filter for assocation loading
+	
     def index
         @universe = Universe.find(params[:universe_id])
         @characters = @universe.characters

@@ -1,8 +1,8 @@
 class LocationsController < InheritedResources::Base
  	belongs_to :universe
     respond_to :html, :json
-    actions :index, :new, :create, :update, :destroy
-       
+    #TODO:  add before_filter for assocation loading
+      
     def index
         @universe = Universe.find(params[:universe_id])
         @locations = @universe.locations

@@ -1,0 +1,16 @@
+<% if @storyarc.nil? %>
+	<h3> Select a Story Arc to see its stories</h3>
+<%else%>
+	<h1><%= link_to 'Stories', universe_storyarc_stories_path([@universe,@storyarc]) %></h1>
+
+	<table>
+	    <tr>
+	        <th>Name</th>
+	    </tr>
+	    <%  @stories.each do |story| %>
+	    <tr>
+	        <td><%= story.name %></td>
+	    </tr>
+	    <% end %>
+	</table>
+<%end%>

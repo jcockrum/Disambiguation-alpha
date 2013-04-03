@@ -1,4 +1,4 @@
-<h1>Stories in the <%=  link_to @storyarc.name, @storyarc, :method => :get %> Story Arc</h1>
+<h1>Stories in the <%=  link_to @storyarc.name, universe_storyarcs_path(@storyarc.universe.id), :method => :get %> Story Arc</h1>
 
 <table>
   <tr>
@@ -11,7 +11,7 @@
 <%  @stories.each do |story| %>
   <tr>
     <td><%= story.name %></td>
-    <td><%= link_to 'Show', storyarc_story_path(@storyarc, story) %></td>
+    <td><%= link_to 'Show', story_path(story) %></td>
     <td><%= link_to 'Edit', edit_storyarc_story_path(@storyarc, story) %></td>
     <td><%= link_to 'Destroy', [@storyarc, story], method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
 </tr>
