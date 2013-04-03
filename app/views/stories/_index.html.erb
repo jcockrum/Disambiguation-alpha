@@ -1,4 +1,5 @@
-<h1>Stories in <%=  link_to @storyarc.name, @storyarc, :method => :get %> Universe</h1>
+<h1>Stories in the <%=  link_to @storyarc.name, universe_storyarcs_path(@storyarc.universe.id), :method => :get %> Story Arc</h1>
+
 </h1>
 
 <table>

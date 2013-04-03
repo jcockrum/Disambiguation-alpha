@@ -8,8 +8,13 @@
         <strong> Side</strong>
         <div class="stacks">
             <div class="inner_stack_left">
-                <strong> Stack 0</strong>
-
+            	<strong> Stack 0</strong>
+            	<table>
+					<tr><th>Name</th></tr>
+					<% @storyarcs.each do |storyarc| %>
+					  <tr><td><%= link_to storyarc.name, storyarc_stories_path(storyarc)%></td></tr>
+					<% end %>
+				</table>
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 1</strong>
