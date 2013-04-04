@@ -14,7 +14,9 @@ Disambiguation::Application.routes.draw do
             end
         end
         resources :storyarcs do
-            resources :scenes
+            resources :scenes do
+            	resources :branches
+            end
         end
     end
 

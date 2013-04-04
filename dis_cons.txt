@@ -10,7 +10,7 @@ rails g scaffold storyarc  name:string universe_id:integer universe:references
 # Storyarc routes
 rails g scaffold story      name:string storyarc_id:integer storyarc:references
 rails g scaffold scene      name:string act:integer chapter:integer story_id:integer story:references
-rails g scaffold branch     name:string branchto_id:integer scene_id:integer scene:references
+rails g scaffold branch     name:string scene_id:integer scene:references
 
 # Location routes
 rails g scaffold event      name:string location_id:integer location:references

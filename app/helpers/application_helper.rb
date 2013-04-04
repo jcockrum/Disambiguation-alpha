@@ -12,8 +12,8 @@ module ApplicationHelper
     html.html_safe
   end
   
-#TODO:  add title code
-#TODO:  add css for tables
-#TODO:  add pjax after html is done
+#TODO: add title codeand real css for tables
+#TODO: test all links in app
+#TODO: add pjax after html is done
 #TODO: add valadation on everything
 end
