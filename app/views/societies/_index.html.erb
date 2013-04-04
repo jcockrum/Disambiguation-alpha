@@ -5,12 +5,17 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Economy</th>
+    <th>Society Type</th>
+    <th>Society Conditions</th>
     <th></th>
   </tr>
-
 <% @societies.each do |society| %>
   <tr>
-    <td><%= best_in_place society, :name, :type => :input%></td>
+    <td><%= best_in_place society, 	:name, 					:type => :input%></td>
+    <td><%= best_in_place [society], :economics, 			:type => :select, :collection => Society.EconTypes%></td>
+    <td><%= best_in_place [society], :social_interaction , 	:type => :select, :collection => Society.S_interaction%></td>
+    <td><%= best_in_place [society], :social_material, 		:type => :select, :collection => Society.S_material%></td>
     <td><%= button_to 'Destroy',society, method: :delete, data: { confirm: 'Are you sure?' } %></td>  </tr>
 <% end %>
 </table>

@@ -3,11 +3,10 @@ class Character < ActiveRecord::Base
     attr_accessible :approach, :efficacy, :name, :regard, :discipline, :universe_id
 
 
-	#add logic to make virture or vice pairs: eg Frugality or Debauchery
-	#Fix the tenses
+	#TODO: add logic to make virture or vice pairs: eg Frugality or Debauchery
+	#TODO: Fix the tenses
     def self.Willpower
-        [
-        	['Temperance', 'Temperance'], 
+        [   ['Temperance', 'Temperance'], 
 			['Debauchery', 'Debauchery'],
 			['Frugality', 'Frugality'], 
 			['Excess', 'Excess'], 

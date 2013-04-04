@@ -1,6 +1,6 @@
 class SocietiesController < InheritedResources::Base
 	respond_to :html, :json
-
+#FIXME: saving new record on page refresh
      def index
         @event = Event.find(params[:event_id])
         @societies = @event.societies
@@ -26,7 +26,7 @@ class SocietiesController < InheritedResources::Base
         @society = Society.find params[:id]
         respond_to do |format|
             if @society.update_attributes(params[:society])
-                format.html { redirect_to(event_societies_url , :notice => 'society was successfully updated.') }
+                format.html { redirect_to(event_societies_url, :notice => 'society was successfully updated.') }
                 format.json { respond_with_bip(@society) }
             else
                 format.html { render :action => "edit" }
@@ -41,5 +41,4 @@ class SocietiesController < InheritedResources::Base
 	    flash[:notice] = "Successfully destroyed society."
 	    redirect_to :back
 	end
-
 end
