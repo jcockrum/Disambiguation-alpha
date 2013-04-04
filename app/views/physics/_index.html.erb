@@ -1,0 +1,24 @@
+<h1>physics at <%= link_to @event.name, location_events_path(@event.location.id), :method => :get %> event</h1>
+
+</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+
+        <th></th>
+    </tr>
+    <% @physics.each do |physic| %>
+    <tr>
+        <td><%= best_in_place physic, 	:position, :type => :input%></td>
+        <td><%= best_in_place physic, 	:size, :type => :input%></td>
+        <td><%= best_in_place physic, 	:force, :type => :input%></td>
+        <td><%= best_in_place physic, 	:energy, :type => :input%></td>
+        <td><%= button_to 'Destroy',physic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>
+
+<br />
+
+<%= render 'form' , :locals =>  {:physic => @physic} %>

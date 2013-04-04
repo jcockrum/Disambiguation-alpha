@@ -10,6 +10,7 @@ Disambiguation::Application.routes.draw do
         resources :locations do
         	resources :events do
         		resources :societies
+        		resources :physics
         	end
         end
         resources :storyarcs do

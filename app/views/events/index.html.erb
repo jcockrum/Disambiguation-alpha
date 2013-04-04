@@ -8,28 +8,40 @@
         <div class="stacks">
             <div class="inner_stack_left">
                 <strong> Stack 0</strong>
-                	<h3>comments/details</h3>
+                <h3>comments/details</h3>
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 1</strong>
-                	<h3>Event Societies</h3>
-                	<table>
-						<tr><th>Name</th></tr>
-						<% @events.each do |event| %>
-						  <tr><td><%= link_to event.name, event_societies_path(event)%></td></tr>
-						<% end %>
-					</table>
+                <table>
+                    <tr>
+                        <th>Societies</th>
+                    </tr>
+                    <% @events.each do |event| %>
+                    <tr>
+                        <td><%= link_to event.name, event_societies_path(event)%></td>
+                    </tr>
+                    <% end %>
+                </table>
                 <p></p>
             </div>
         </div>
         <div class="stacks">
             <div class="inner_stack_left">
                 <strong> Stack 2</strong>
-                
+
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 3</strong>
-				
+                <table>
+                    <tr>
+                        <th>Physics</th>
+                    </tr>
+                    <% @events.each do |event| %>
+                    <tr>
+                        <td><%= link_to event.name, event_physics_path(event)%></td>
+                    </tr>
+                    <% end %>
+                </table>
             </div>
     </aside>
 </section>

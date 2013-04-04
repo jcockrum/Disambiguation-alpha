@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130403205143) do
+ActiveRecord::Schema.define(:version => 20130404030733) do
 
   create_table "characters", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(:version => 20130403205143) do
   end
 
   add_index "locations", ["universe_id"], :name => "index_locations_on_universe_id"
+
+  create_table "physics", :force => true do |t|
+    t.string   "position"
+    t.string   "size"
+    t.float    "weight"
+    t.string   "energy"
+    t.string   "force"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "physics", ["event_id"], :name => "index_physics_on_event_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
