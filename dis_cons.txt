@@ -17,7 +17,41 @@ rails g scaffold event      name:string location_id:integer location:references
 rails g scaffold physics    position:string size:string weight:float energy:string force:string event_id:integer event:references
 rails g scaffold society    structure:string source:string social:string religion:string event_id:integer event:references
 
-
-
 # Polymorphic comments
 rails g scaffold comments   content:string tag_type:string
+
+rails g scaffold society    event_id:integer event:references
+
+name 
+economics
+religious
+values
+social
+Political
+
+religious_philosophy
+religious_organization
+religious_cult
+
+values_solidarity
+values_socialorder
+
+social_interaction
+social_material_conditions 
+
+Political_
+structure
+source
+source_A
+
+
+
+
+
+
+
+
+
+
+
+

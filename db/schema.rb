@@ -57,13 +57,12 @@ ActiveRecord::Schema.define(:version => 20130403205143) do
 
   create_table "societies", :force => true do |t|
     t.string   "name"
-    t.string   "structure"
-    t.string   "source"
-    t.string   "social"
-    t.string   "religion"
+    t.string   "social_material"
+    t.string   "social_interaction"
+    t.string   "economics"
     t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   add_index "societies", ["event_id"], :name => "index_societies_on_event_id"
