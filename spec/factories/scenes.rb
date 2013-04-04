@@ -1,9 +1,11 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :story do
+  factory :scene do
     name "MyString"
-    storyarc_id 1
-    storyarc nil
+    act 1
+    chapter 1
+    story_id 1
+    story nil
   end
 end

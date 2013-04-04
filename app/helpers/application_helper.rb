@@ -15,4 +15,5 @@ module ApplicationHelper
 #TODO:  add title code
 #TODO:  add css for tables
 #TODO:  add pjax after html is done
+#TODO: add valadation on everything
 end

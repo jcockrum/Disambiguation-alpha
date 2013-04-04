@@ -13,9 +13,9 @@
             	<table>
 					<tr><th>Name</th></tr>
 					<% @storyarcs.each do |storyarc| %>
-					  <tr><td><%= link_to storyarc.name, storyarc_stories_path(storyarc)%></td></tr>
+					  <tr><td><%= link_to storyarc.name, storyarc_scenes_path(storyarc)%></td></tr>
 					<% end %>
-				</table>
+				</table>s
             </div>
             <div class="inner_stack_right">
                 <strong> Stack 1</strong>
