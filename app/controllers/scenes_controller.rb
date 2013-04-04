@@ -1,6 +1,9 @@
 class ScenesController < InheritedResources::Base
 	respond_to :html, :json
 
+#TODO: add link to @characters
+#TODO: add link to @events
+
      def index
         @storyarc = Storyarc.find(params[:storyarc_id])
         @scenes = @storyarc.scenes
@@ -36,7 +39,7 @@ class ScenesController < InheritedResources::Base
    end
 
     def destroy
-	    @scene = scene.find(params[:id])
+	    @scene = Scene.find(params[:id])
 	    @scene.destroy
 	    flash[:notice] = "Successfully destroyed scene."
 	    redirect_to :back
