@@ -1,0 +1,22 @@
+<h1>Stories in the <%= link_to @storyarc.name, universe_storyarcs_path(@storyarc.universe.id), :method => :get %> Story Arc</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Story title</th>
+        <th>Act</th>
+        <th>Chapter</th>
+        <th></th>
+    </tr>
+    <% @scenes.each do |scene| %>
+    <tr>
+        <td><%= best_in_place scene, :name, :type => :input%></td>
+        <td><%= best_in_place scene, :story, :type => :input%></td>
+        <td><%= best_in_place scene, :act, :type => :input%></td>
+        <td><%= best_in_place scene, :chapter, :type => :input%></td>
+        <td><%= button_to 'Destroy',scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>
+<br />
+<%= render 'form' , :locals =>  {:scene => @scene} %>

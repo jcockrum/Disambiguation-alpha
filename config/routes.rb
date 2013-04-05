@@ -4,23 +4,25 @@ Disambiguation::Application.routes.draw do
     devise_for :users
     resources :users
 
-#Site Content
+    #Site Content
     resources :universes, :shallow => true do
         resources :characters
         resources :locations do
             resources :events do
                 resources :societies
-                resources :physics
             end
         end
         resources :storyarcs do
-            resources :scenes do
-            	resources :branches
+            resources :stories do
+                resources :scenes do
+                    resources :branches
+                end
             end
+
         end
     end
 
-#Homepages
+    #Homepages
     authenticated :user do
         root :to => 'universes#index'
     end

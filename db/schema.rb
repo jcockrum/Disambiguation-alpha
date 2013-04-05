@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404094856) do
+ActiveRecord::Schema.define(:version => 20130405095752) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -53,19 +53,6 @@ ActiveRecord::Schema.define(:version => 20130404094856) do
 
   add_index "locations", ["universe_id"], :name => "index_locations_on_universe_id"
 
-  create_table "physics", :force => true do |t|
-    t.string   "position"
-    t.string   "size"
-    t.float    "weight"
-    t.string   "energy"
-    t.string   "force"
-    t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "physics", ["event_id"], :name => "index_physics_on_event_id"
-
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -79,17 +66,14 @@ ActiveRecord::Schema.define(:version => 20130404094856) do
 
   create_table "scenes", :force => true do |t|
     t.string   "name"
-    t.string   "story"
     t.integer  "act"
     t.integer  "chapter"
-    t.integer  "branch_id"
-    t.integer  "storyarc_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "story_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
-  add_index "scenes", ["branch_id"], :name => "index_scenes_on_branch_id"
-  add_index "scenes", ["storyarc_id"], :name => "index_scenes_on_storyarc_id"
+  add_index "scenes", ["story_id"], :name => "index_scenes_on_story_id"
 
   create_table "scenes_branches", :force => true do |t|
     t.integer  "scene_id"
@@ -109,6 +93,15 @@ ActiveRecord::Schema.define(:version => 20130404094856) do
   end
 
   add_index "societies", ["event_id"], :name => "index_societies_on_event_id"
+
+  create_table "stories", :force => true do |t|
+    t.string   "name"
+    t.integer  "storyarc_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "stories", ["storyarc_id"], :name => "index_stories_on_storyarc_id"
 
   create_table "storyarcs", :force => true do |t|
     t.string   "name"

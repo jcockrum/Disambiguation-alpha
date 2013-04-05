@@ -1,0 +1,13 @@
+<%= simple_form_for(@story) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :storyarc_id %>
+    <%= f.association :storyarc %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
