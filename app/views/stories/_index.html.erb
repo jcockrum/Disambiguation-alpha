@@ -1,0 +1,16 @@
+<h1>Stories in the <%= link_to @storyarc.name, universe_storyarcs_path(@storyarc.universe.id), :method => :get %> Story Arc</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th></th>
+    </tr>
+    <% @stories.each do |story| %>
+    <tr>
+        <td><%= best_in_place story, :name, :type => :input%></td>
+        <td><%= button_to 'Destroy',story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>
+<br />
+<%= render 'form' , :locals =>  {:story => @story} %>

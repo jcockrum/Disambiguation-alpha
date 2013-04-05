@@ -5,21 +5,21 @@ class ScenesController < InheritedResources::Base
 #TODO: add link to @events
 
      def index
-        @storyarc = Storyarc.find(params[:storyarc_id])
-        @scenes = @storyarc.scenes
+        @story = Story.find(params[:story_id])
+        @scenes = @story.scenes
     end
 
     def new
-		@storyarc = Storyarc.find(params[:storyarc_id])
-		@scene = @storyarc.scene.build
+		@story = Story.find(params[:story_id])
+		@scene = @story.scene.build
     end
 
     def create
-        @storyarc = Storyarc.find(params[:storyarc_id])
-	    @scene = @storyarc.scenes.build(params[:scene])
+        @story = Story.find(params[:story_id])
+	    @scene = @story.scenes.build(params[:scene])
 	    if @scene.save
 	      flash[:notice] = "Successfully created scene."
-	      redirect_to storyarc_scenes_url
+	      redirect_to story_scenes_url
 	    else
 	      render :action => 'new'
 	    end
@@ -29,7 +29,7 @@ class ScenesController < InheritedResources::Base
         @scene = Scene.find params[:id]
         respond_to do |format|
             if @scene.update_attributes(params[:scene])
-                format.html { redirect_to(storyarc_scenes_url , :notice => 'scene was successfully updated.') }
+                format.html { redirect_to(story_scenes_url , :notice => 'scene was successfully updated.') }
                 format.json { respond_with_bip(@scene) }
             else
                 format.html { render :action => "edit" }
