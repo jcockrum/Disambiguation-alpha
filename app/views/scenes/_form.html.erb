@@ -3,9 +3,8 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :story %>
-    <%= f.input :act %>
-    <%= f.input :chapter %>
+    <%= f.input :act, collection: 1..6, prompt: "Select Act"%>
+    <%= f.input :chapter, collection: 1..60, prompt: "Select Chapter"%>
   </div>
 
   <div class="form-actions">
