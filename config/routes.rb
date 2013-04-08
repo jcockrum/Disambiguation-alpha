@@ -8,7 +8,6 @@ Disambiguation::Application.routes.draw do
     resources :universes, :shallow => true do
         resources :characters
         resources :locations
-        end
         resources :storyarcs do
             resources :stories do
                 resources :scenes do
