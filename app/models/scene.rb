@@ -5,5 +5,7 @@ class Scene < ActiveRecord::Base
   	has_one :society
     has_many :plotlines
     has_many :branches, :through => :plotlines
+    
+#TODO: Autonumbering for acts, chapters(first record)
 
 end

@@ -1,6 +1,8 @@
 class BranchesController < InheritedResources::Base
 	respond_to :html, :json
 
+#TODO: add logic for default branches
+
      def index
         @scene = Scene.find(params[:scene_id])
         @branches = @scene.branches
