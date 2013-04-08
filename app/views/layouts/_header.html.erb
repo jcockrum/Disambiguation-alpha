@@ -1,4 +1,17 @@
 <header id="page_header" role="banner">
     <%= link_to "Disambiguation", root_path%>
     <%= render 'layouts/devise_nav' %>
+    <nav id="main_nav">
+        <ul>
+            <li><%= link_to"Accounts", users_path%></li>
+            <li><%= link_to"Universes", universes_path%></li>
+          <!--  <li><%#= link_to"Characters", universe_characters_path%></li>
+            <li><%#= link_to"Locations", universe_locations_path%></li>
+            <li><%#= link_to"Story Arcs", universe_storyarcs_path%></li>
+            <li><%#= link_to"Stories", storyarc_stories_path%></li>
+            <li><%#= link_to"Scenes", story_scenes_path%></li>
+            <li><%#= link_to"Societies", scene_societies_path%></li> 
+            -->
+        </ul>
+    </nav>
 </header>
