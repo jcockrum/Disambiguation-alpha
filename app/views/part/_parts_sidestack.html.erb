@@ -1,0 +1,18 @@
+<ul id="parts">
+  <% @parts.each do |part| %>
+    <li><%= part.content %></li>
+  <% end %>
+</ul>
+
+<h2>New Part</h2>
+<% form_for [@partible, part.new] do |form| %>
+  <ol class="formList">
+    <li>
+      <%= form.label :content %>
+      <%= form.text_area :content, :rows => 10 %>
+    </li>
+    <li><%= submit_tag "Add part" %></li>
+  </ol>
+<% end %>
+
+

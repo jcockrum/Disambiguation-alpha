@@ -6,8 +6,8 @@ Disambiguation::Application.routes.draw do
 
     #Site Content
     resources :universes, :shallow => true do
-        resources :characters
-        resources :locations
+        resources :characters, :has_many => :parts
+        resources :locations, :has_many => :parts
         resources :storyarcs do
             resources :stories do
                 resources :scenes do
