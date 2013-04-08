@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406182350) do
+ActiveRecord::Schema.define(:version => 20130408202423) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(:version => 20130406182350) do
   end
 
   add_index "locations", ["universe_id"], :name => "index_locations_on_universe_id"
+
+  create_table "parts", :force => true do |t|
+    t.text     "content"
+    t.integer  "author_id"
+    t.integer  "partible_id"
+    t.string   "partible_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "plotlines", :force => true do |t|
     t.integer  "scene_id"
