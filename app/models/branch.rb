@@ -1,4 +1,6 @@
 class Branch < ActiveRecord::Base
-  has_and_belongs_to_many :scenes
-  attr_accessible :name, :scene_id
+    attr_accessible :name, :scene_id
+
+    has_many :plotlines
+    has_many :scenes, :through => :plotlines
 end

@@ -10,12 +10,13 @@ rails g scaffold storyarc  name:string universe_id:integer universe:references
 # Storyarc routes
 rails g scaffold story      name:string storyarc_id:integer storyarc:references
 rails g scaffold scene      name:string act:integer chapter:integer story_id:integer story:references
+rails g scaffold society    structure:string source:string social:string religion:string scene_id:integer scene:references
 rails g scaffold branch     name:string scene_id:integer scene:references
+rails g model plotline      scene_id:integer branches_id:integer 
+rails g controller plotline
 
-# Location routes
-rails g scaffold event      name:string location_id:integer location:references
-rails g scaffold physics    position:string size:string weight:float energy:string force:string event_id:integer event:references
-rails g scaffold society    structure:string source:string social:string religion:string event_id:integer event:references
+
+
 
 # Polymorphic comments
 rails g scaffold comments   content:string tag_type:string
@@ -42,9 +43,12 @@ social_material_conditions
 Political_
 structure
 source
-source_A
+source
 
 
+Removed:
+rails g scaffold event      name:string location_id:integer location:references
+rails g scaffold physics    position:string size:string weight:float energy:string force:string event_id:integer event:references
 
 
 

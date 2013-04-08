@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405095752) do
+ActiveRecord::Schema.define(:version => 20130406182350) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -35,15 +35,6 @@ ActiveRecord::Schema.define(:version => 20130405095752) do
 
   add_index "characters", ["universe_id"], :name => "index_characters_on_universe_id"
 
-  create_table "events", :force => true do |t|
-    t.string   "name"
-    t.integer  "location_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "events", ["location_id"], :name => "index_events_on_location_id"
-
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.integer  "universe_id"
@@ -52,6 +43,13 @@ ActiveRecord::Schema.define(:version => 20130405095752) do
   end
 
   add_index "locations", ["universe_id"], :name => "index_locations_on_universe_id"
+
+  create_table "plotlines", :force => true do |t|
+    t.integer  "scene_id"
+    t.integer  "branch_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -75,24 +73,17 @@ ActiveRecord::Schema.define(:version => 20130405095752) do
 
   add_index "scenes", ["story_id"], :name => "index_scenes_on_story_id"
 
-  create_table "scenes_branches", :force => true do |t|
-    t.integer  "scene_id"
-    t.integer  "branches_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "societies", :force => true do |t|
     t.string   "name"
     t.string   "social_material"
     t.string   "social_interaction"
     t.string   "economics"
-    t.integer  "event_id"
+    t.integer  "scene_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
-  add_index "societies", ["event_id"], :name => "index_societies_on_event_id"
+  add_index "societies", ["scene_id"], :name => "index_societies_on_scene_id"
 
   create_table "stories", :force => true do |t|
     t.string   "name"

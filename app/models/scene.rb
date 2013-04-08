@@ -1,6 +1,9 @@
 class Scene < ActiveRecord::Base
-  belongs_to :story
-  has_and_belongs_to_many :branches
-  
-  attr_accessible :act, :chapter, :name,:story_id,:story
+    attr_accessible :act, :chapter, :name,:story_id,:story
+  	belongs_to :story
+  	
+  	has_one :society
+    has_many :plotlines
+    has_many :branches, :through => :plotlines
+
 end

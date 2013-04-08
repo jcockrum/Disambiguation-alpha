@@ -7,15 +7,13 @@ Disambiguation::Application.routes.draw do
     #Site Content
     resources :universes, :shallow => true do
         resources :characters
-        resources :locations do
-            resources :events do
-                resources :societies
-            end
+        resources :locations
         end
         resources :storyarcs do
             resources :stories do
                 resources :scenes do
                     resources :branches
+                    resources :societies
                 end
             end
 
