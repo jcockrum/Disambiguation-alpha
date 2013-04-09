@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(:version => 20130408202423) do
 
   create_table "parts", :force => true do |t|
     t.text     "content"
-    t.integer  "author_id"
     t.integer  "partible_id"
     t.string   "partible_type"
     t.datetime "created_at",    :null => false

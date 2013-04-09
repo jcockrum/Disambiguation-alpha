@@ -1,0 +1,15 @@
+<ul id="parts">
+  <% @parts.each do |part| %>
+    <li><%= part.content %></li>
+  <% end %>
+</ul>
+
+<%= simple_form_for([@partible, Part.new]) do |f| %>
+<%= f.error_notification %>
+	<div class="form-inputs">
+	    <%= f.input :content, as: :text , :input_html => { :cols => 100, :rows => 5 } %>
+	</div>
+	<div class="form-actions">
+	    <%= f.button :submit %>
+	</div>
+<% end %>

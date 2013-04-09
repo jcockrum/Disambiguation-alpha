@@ -17,6 +17,7 @@
 	<td><%= best_in_place [character], :approach, :type => :select, :collection => Character.Manner%></td>
 	<td><%= best_in_place [character], :efficacy, :type => :select, :collection => Character.Power%></td>
 	<td><%= best_in_place [character], :regard, :type => :select, :collection => Character.Shown%></td>
+	<td><%=  button_to 'Show', character, :method => :get %> </td>>
 	<td><%= button_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  
   </tr>

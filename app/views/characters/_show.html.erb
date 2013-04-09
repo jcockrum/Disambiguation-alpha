@@ -1,0 +1,19 @@
+<section>
+	<table>
+	    <tr>
+	        <th>Name</th>
+	        <th>Reactions filter </th>
+	        <th>Approach twards </th>
+	        <th>Efficacy </th>
+	        <th>Regard of others </th>
+	    </tr>
+	    <tr>
+	        <td><%= best_in_place @character, :name, :type => :input %></td>
+	        <td><%= best_in_place @character, :discipline, :type => :select, :collection => Character.Willpower%></td>
+	        <td><%= best_in_place @character, :approach, :type => :select, :collection => Character.Manner%></td>
+	        <td><%= best_in_place @character, :efficacy, :type => :select, :collection => Character.Power%></td>
+	        <td><%= best_in_place @character, :regard, :type => :select, :collection => Character.Shown%></td>
+	    </tr>
+	</table>
+</section>
+

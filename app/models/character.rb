@@ -4,7 +4,6 @@ class Character < ActiveRecord::Base
     belongs_to :universe
     has_many :parts, :as => :partible
     
-    
     #TODO: add logic to make virture or vice pairs: eg Frugality or Debauchery
     #TODO: Fix the tenses
     
