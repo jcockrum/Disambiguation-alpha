@@ -9,7 +9,9 @@ Disambiguation::Application.routes.draw do
         resources :characters do
         	resources :parts
         end
-        resources :locations 
+        resources :locations  do
+        	resources :parts
+        end 
         resources :storyarcs do
             resources :stories do
                 resources :scenes do
