@@ -1,8 +1,14 @@
-<ul id="parts">
+<table id="parts">
   <% @parts.each do |part| %>
-    <li><%= part.content %></li>
+    <tr>
+	    <td><%= best_in_place part, :content, :type => :textarea %></td>
+	    <td>  <%= button_to "Delete", part_path(@part),
+               :confirm => 'Are you sure?',
+               :method => :delete %> 
+       </td> 
+    </tr>
   <% end %>
-</ul>
+</table>
 
 <%= simple_form_for([@partible, Part.new]) do |f| %>
 <%= f.error_notification %>
@@ -12,4 +18,5 @@
 	<div class="form-actions">
 	    <%= f.button :submit %>
 	</div>
+
 <% end %>
