@@ -3,7 +3,7 @@
 <table>
     <tr> <th>Name</th> </tr>
     <% @universe.locations.each do |location| %>
-    	<tr> <td><%= link_to location.name, universe_locations_path(@universe) %></td> </tr>
+    	<tr> <td><%= link_to location.name, location_path(location) %></td> </tr>
     <% end %>
 </table>
 

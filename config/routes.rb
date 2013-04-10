@@ -13,6 +13,7 @@ Disambiguation::Application.routes.draw do
         	resources :parts, :only => [:index, :create, :new]
         end 
         resources :storyarcs do
+        	resources :parts, :only => [:index, :create, :new]
             resources :stories do
                 resources :scenes do
                     resources :branches

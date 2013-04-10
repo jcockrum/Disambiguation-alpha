@@ -12,7 +12,7 @@
 	<tr>
 		<td><%= best_in_place universe, :name, :type => :input %></td>
 		<td><%= universe.user_id %></td>
-		<td> <%=  button_to 'Show', universe, :method => :get %> </td>>
+		<td> <%=  button_to 'Show', universe, :method => :get %> </td>
 		<td> <%=  button_to  'Delete', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	</tr>
 	<% end %>

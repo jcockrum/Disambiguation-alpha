@@ -3,7 +3,7 @@ class Location < ActiveRecord::Base
   
   belongs_to :universe
   has_many :scenes
-  has_many :parts, :as => :partible
+  has_many :parts, :as => :partible, :dependent => :destroy
   
   
 end

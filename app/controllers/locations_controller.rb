@@ -5,6 +5,13 @@ class LocationsController < InheritedResources::Base
         @universe = Universe.find(params[:universe_id])
         @locations = @universe.locations
     end
+    
+    def show
+        @location = Location.find params[:id]
+        @partible = @location
+        @parts = @partible.parts
+        @part = Part.new
+    end
 
     def new
 		@universe = Universe.find(params[:universe_id])

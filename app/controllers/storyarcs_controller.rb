@@ -5,6 +5,13 @@ class StoryarcsController < InheritedResources::Base
         @universe = Universe.find(params[:universe_id])
         @storyarcs = @universe.storyarcs
     end
+    
+    def show
+        @storyarc = Storyarc.find params[:id]
+        @partible = @storyarc
+        @parts = @partible.parts
+        @part = Part.new
+    end
 
     def new
 		@universe = Universe.find(params[:universe_id])

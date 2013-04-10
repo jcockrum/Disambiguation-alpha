@@ -1,21 +1,25 @@
 <section id="middle">
-	<aside id="single_side_Left">
-		<strong>single_side_right</strong>
+    <aside id="single_side_Left">
+        <strong>single_side_right</strong>
         <div class="stacks">
             <div class="inner_stack_single">
                 <strong> inner_stack_single 0</strong>
-                	<%= render 'locations/locations_sidestack' %>
+                render Characters
             </div>
             <div class="inner_stack_single">
                 <strong>inner_stack_single 1</strong>
-                	<%= render 'storyarcs/storyarcs_sidestack' %>
+                render scenes
             </div>
         </div>
-	</aside>
-		
+    </aside>
+
     <div id="single_center">
         <strong> single_center:</strong>
-        <h1>Characters in <%=  link_to @universe.name, @universe, :method => :get %> Universe</h1>
-		<%= render "index" %>
+        <h1><%= link_to 'Locations', universe_locations_path(@location.universe_id) %></h1>
+        <%= render "show" %>
+        <fieldset><legend>Location Descriptions</legend>
+			 <%= render 'parts/parts_sidestack' %>           
+        </fieldset>
     </div>
+
 </section><!-- #middle-->
