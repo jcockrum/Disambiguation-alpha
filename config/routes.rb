@@ -6,6 +6,7 @@ Disambiguation::Application.routes.draw do
 
     #Site Content
     resources :universes, :shallow => true do
+    	resources :parts, :only => [:index, :create, :new]
         resources :characters do
         	resources :parts, :only => [:index, :create, :new]
         end
@@ -16,6 +17,7 @@ Disambiguation::Application.routes.draw do
         	resources :parts, :only => [:index, :create, :new]
             resources :stories do
                 resources :scenes do
+                	resources :parts, :only => [:index, :create, :new]
                     resources :branches
                     resources :societies
                 end

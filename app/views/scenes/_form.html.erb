@@ -3,10 +3,9 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :act, collection: 1..6, prompt: "Select Act"%>
-    <%= f.input :chapter, collection: 1..60, prompt: "Select Chapter"%>
+    <%= #f.association :location, collection: Location.all(order: 'name') 
+    %>
   </div>
-
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

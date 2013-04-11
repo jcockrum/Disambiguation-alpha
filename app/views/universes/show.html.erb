@@ -2,7 +2,9 @@
     <div id="container">
         <strong> container:</strong>
         <h1>Welcome to <%= link_to "Universe", root_path%> <%= @universe.name %></h1>
-		<p>add Description (comment/tag)</p>
+		<fieldset><legend>Location Descriptions</legend>
+			 <%= render 'parts/parts_sidestack' %>           
+        </fieldset>
     </div><!-- #container-->
 
     <aside id="double_side_right">

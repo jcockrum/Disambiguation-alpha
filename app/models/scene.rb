@@ -5,6 +5,7 @@ class Scene < ActiveRecord::Base
   	has_one :society
     has_many :plotlines
     has_many :branches, :through => :plotlines
+    has_many :parts, :as => :partible, :dependent => :destroy
     
 #TODO: Autonumbering for acts, chapters(first record)
 

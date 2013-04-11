@@ -1,7 +1,13 @@
 <section>
 	<table>
-	    <tr> <th>Name</th> </tr>
-	    <tr><td><%= best_in_place @storyarc, :name, :type => :input %></td></tr>
+	    <tr> 
+	    	<th>Name</th> 
+	    	<th></th>
+	    </tr>
+	    <tr>
+	    	<td><%= best_in_place @storyarc, :name, :type => :input %></td>
+	    	<td><%= link_to 'Stories', storyarc_stories_path(@storyarc)%></td>
+	    </tr>
 	</table>
 </section>
 

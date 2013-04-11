@@ -16,6 +16,13 @@ class UniversesController < InheritedResources::Base
             render :new
         end
     end
+    
+    def show
+        @universe = Universe.find params[:id]
+        @partible = @universe
+        @parts = @partible.parts
+        @part = Part.new
+    end
 
     def update
         @universe = Universe.find(params[:id])

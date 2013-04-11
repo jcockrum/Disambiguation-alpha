@@ -8,6 +8,13 @@ class ScenesController < InheritedResources::Base
         @story = Story.find(params[:story_id])
         @scenes = @story.scenes
     end
+    
+    def show
+        @scene = Scene.find params[:id]
+        @partible = @scene
+        @parts = @partible.parts
+        @part = Part.new
+    end
 
     def new
 		@story = Story.find(params[:story_id])
