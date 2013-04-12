@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20130408202423) do
 
   create_table "scenes", :force => true do |t|
     t.string   "name"
+    t.string   "location"
     t.integer  "act"
     t.integer  "chapter"
     t.integer  "story_id"

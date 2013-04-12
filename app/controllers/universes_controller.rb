@@ -19,6 +19,7 @@ class UniversesController < InheritedResources::Base
     
     def show
         @universe = Universe.find params[:id]
+        session[:universe_id] = @universe.id
         @partible = @universe
         @parts = @partible.parts
         @part = Part.new

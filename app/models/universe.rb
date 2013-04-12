@@ -4,4 +4,7 @@ class Universe < ActiveRecord::Base
     has_many :locations
     has_many :storyarcs
     has_many :parts, :as => :partible, :dependent => :destroy
+
+
+
 end
