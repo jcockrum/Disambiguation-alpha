@@ -2,6 +2,10 @@ class Character < ActiveRecord::Base
 
     attr_accessible :approach, :efficacy, :name, :regard, :discipline, :universe_id
     belongs_to :universe
+
+    has_many :npcs
+    has_many :scenes, :through => :npcs
+    
     has_many :parts, :as => :partible, :dependent => :destroy
     
     #TODO: add logic to make virture or vice pairs: eg Frugality or Debauchery

@@ -13,7 +13,7 @@ class PlotlineController < ApplicationController
     def destroy
         @plotline = Scene.plotlines.find(params[:id])
         @plotline.destroy
-        flash[:notice] = "Removed friendship."
+        flash[:notice] = "Removed Plotline"
         redirect_to story_scenes_url
     end
 
