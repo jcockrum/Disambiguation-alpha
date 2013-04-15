@@ -4,7 +4,7 @@ class LocationsController < InheritedResources::Base
         
      def show
         @location = Location.find params[:id]
-        @partible = @character
+        @partible = @location
         @parts = @partible.parts
         @part = Part.new
     end

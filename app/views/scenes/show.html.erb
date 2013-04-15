@@ -4,11 +4,13 @@
         <div class="stacks">
             <div class="inner_stack_single">
                 <strong> inner_stack_single 0</strong>
-                <h3> Characters Present</h3>
-                <%= render 'characters/characters_sidestack' %>
+                <h2>"<%= @scene.location %>" location</h2>
+                <p>lookup location.part.first</p>
+                <h3> Information</h3> 
             </div>
             <div class="inner_stack_single">
                 <strong>inner_stack_single 1</strong>
+                 <%= render 'characters/characters_sidestack' %>
                 <table>
                     <tr>
                         <th>Added Character</th>
@@ -29,7 +31,6 @@
     <div id="single_center">
         <strong> single_center:</strong>
         <h1> "<%= @scene.name %>" in <%= link_to @scene.story.name, story_scenes_path(@scene.story_id) %></h1>
-        <h2><%= @scene.location%></h2>
         <fieldset>
             <legend>
                 Genrate Branch Text
