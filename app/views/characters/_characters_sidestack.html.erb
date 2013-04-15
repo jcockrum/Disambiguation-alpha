@@ -1,7 +1,7 @@
-<h1><%= link_to 'Characters', universe_characters_path(@universe) %></h1>
+<h1><%= link_to 'Characters', scene_characters_path(@scene) %></h1>
 
 <table>
-<% @universe.characters.each do |character| %>
+<% @scene.characters.each do |character| %>
   <tr>
     <td><%=  link_to character.name, character_path(character) %></td>
   </tr>

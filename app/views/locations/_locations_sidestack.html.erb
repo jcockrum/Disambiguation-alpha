@@ -1,8 +1,8 @@
-<h1><%= link_to 'Locations', universe_locations_path(@universe) %></h1>
+<h1><%= link_to 'Locations', scenes_locations_path(@scene) %></h1>
 
 <table>
     <tr> <th>Name</th> </tr>
-    <% @universe.locations.each do |location| %>
+    <% @scene.locations.each do |location| %>
     	<tr> <td><%= link_to location.name, location_path(location) %></td> </tr>
     <% end %>
 </table>
