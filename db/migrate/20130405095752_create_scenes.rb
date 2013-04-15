@@ -5,7 +5,6 @@ class CreateScenes < ActiveRecord::Migration
       t.string :location
       t.integer :act
       t.integer :chapter
-      t.integer :story_id
       t.references :story
 
       t.timestamps

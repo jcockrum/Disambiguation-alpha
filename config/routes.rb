@@ -6,27 +6,29 @@ Disambiguation::Application.routes.draw do
 
     #Site Content
     resources :universes, :shallow => true do
-    	resources :parts, :only => [:index, :create, :new]
-        resources :characters do
-        	resources :parts, :only => [:index, :create, :new]
-        end
-        resources :locations  do
-        	resources :parts, :only => [:index, :create, :new]
-        end 
+        resources :parts, :only => [:index, :create, :new]
         resources :storyarcs do
-        	resources :parts, :only => [:index, :create, :new]
+            resources :parts, :only => [:index, :create, :new]
             resources :stories do
                 resources :scenes do
-                	resources :parts, :only => [:index, :create, :new]
-                    resources :branches
+                    resources :parts, :only => [:index, :create, :new]
+                    resources :branches do
+                        resources :parts, :only => [:index, :create, :new]
+                    end
                     resources :societies
+                    resources :characters do
+                        resources :parts, :only => [:index, :create, :new]
+                    end
+                    resources :locations do
+                        resources :parts, :only => [:index, :create, :new]
+                    end
                 end
             end
 
         end
     end
 
-resources :parts,:only => [:update, :destroy]
+    resources :parts,:only => [:update, :destroy]
 
     #Homepages
     authenticated :user do

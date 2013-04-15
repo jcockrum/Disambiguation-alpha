@@ -1,10 +1,7 @@
 class Location < ActiveRecord::Base
-    attr_accessible :name, :universe_id
+    attr_accessible :name
 
-    belongs_to :universe
-
-    has_many :events
-    has_many :scenes, :through => :events
+    belongs_to :scene
 
     has_many :parts, :as => :partible, :dependent => :destroy
 

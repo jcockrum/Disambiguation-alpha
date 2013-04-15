@@ -6,11 +6,10 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :approach
       t.string :efficacy
       t.string :regard
-      t.integer :universe_id
-      t.references :universe
+      t.references :scene
 
       t.timestamps
     end
-    add_index :characters, :universe_id
+    add_index :characters, :scene_id
   end
 end

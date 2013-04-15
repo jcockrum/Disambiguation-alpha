@@ -5,7 +5,6 @@ class CreateSocieties < ActiveRecord::Migration
       t.string :social_material
       t.string :social_interaction
       t.string :economics
-      t.integer :scene_id
       t.references :scene
 
       t.timestamps

@@ -1,10 +1,9 @@
-
 <%= simple_form_for(:scene) do |f| %>
   <%= f.error_notification %>
 	<% locations_array = Location.all.map { |location| [location.name, location.name] } %>
 
   <div class="form-inputs">
-    <%= f.input :name, %>
+    <%= f.input :name %>
     <%= f.input :location, collection: locations_array %>
     
   </div>

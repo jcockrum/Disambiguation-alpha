@@ -1,5 +1,5 @@
 class Society < ActiveRecord::Base
-  attr_accessible :name, :social_material, :social_interaction, :economics, :scene_id
+  attr_accessible :name, :social_material, :social_interaction, :economics
   belongs_to :scene  
   
   def self.EconTypes

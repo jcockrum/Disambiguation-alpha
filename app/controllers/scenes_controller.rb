@@ -1,8 +1,6 @@
 class ScenesController < InheritedResources::Base
 	respond_to :html, :json
 
-#TODO: add link to @characters
-#TODO: add link to @events
 
      def index
         @story = Story.find(params[:story_id])

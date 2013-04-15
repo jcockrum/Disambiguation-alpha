@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412111702) do
+ActiveRecord::Schema.define(:version => 20130408202423) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -28,35 +28,21 @@ ActiveRecord::Schema.define(:version => 20130412111702) do
     t.string   "approach"
     t.string   "efficacy"
     t.string   "regard"
-    t.integer  "universe_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "characters", ["universe_id"], :name => "index_characters_on_universe_id"
-
-  create_table "events", :force => true do |t|
     t.integer  "scene_id"
-    t.integer  "location_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "characters", ["scene_id"], :name => "index_characters_on_scene_id"
 
   create_table "locations", :force => true do |t|
     t.string   "name"
-    t.integer  "universe_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "locations", ["universe_id"], :name => "index_locations_on_universe_id"
-
-  create_table "npcs", :force => true do |t|
     t.integer  "scene_id"
-    t.integer  "character_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "locations", ["scene_id"], :name => "index_locations_on_scene_id"
 
   create_table "parts", :force => true do |t|
     t.text     "content"
