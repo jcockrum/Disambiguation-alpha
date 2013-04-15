@@ -87,12 +87,12 @@ ActiveRecord::Schema.define(:version => 20130408202423) do
     t.string   "social_material"
     t.string   "social_interaction"
     t.string   "economics"
-    t.integer  "scene_id"
+    t.integer  "location_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
-  add_index "societies", ["scene_id"], :name => "index_societies_on_scene_id"
+  add_index "societies", ["location_id"], :name => "index_societies_on_location_id"
 
   create_table "stories", :force => true do |t|
     t.string   "name"

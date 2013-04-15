@@ -15,12 +15,12 @@ Disambiguation::Application.routes.draw do
                     resources :branches do
                         resources :parts, :only => [:index, :create, :new]
                     end
-                    resources :societies
                     resources :characters do
                         resources :parts, :only => [:index, :create, :new]
                     end
                     resources :locations do
                         resources :parts, :only => [:index, :create, :new]
+                        resources :societies
                     end
                 end
             end

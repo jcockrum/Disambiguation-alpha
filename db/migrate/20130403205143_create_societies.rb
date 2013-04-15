@@ -5,10 +5,10 @@ class CreateSocieties < ActiveRecord::Migration
       t.string :social_material
       t.string :social_interaction
       t.string :economics
-      t.references :scene
+      t.references :location
 
       t.timestamps
     end
-    add_index :societies, :scene_id
+    add_index :societies, :location_id
   end
 end

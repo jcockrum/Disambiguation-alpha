@@ -10,7 +10,6 @@ class Scene < ActiveRecord::Base
     
     has_many :parts, :as => :partible, :dependent => :destroy
     
-    has_one :society
 #TODO: Autonumbering for acts, chapters(first record)
 
 end

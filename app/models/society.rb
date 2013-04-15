@@ -1,6 +1,6 @@
 class Society < ActiveRecord::Base
   attr_accessible :name, :social_material, :social_interaction, :economics
-  belongs_to :scene  
+  belongs_to :location  
   
   def self.EconTypes
 	[['Barter',  'Barter'], ['Market', 'Market'], ['Planned', 'Planned'], 
