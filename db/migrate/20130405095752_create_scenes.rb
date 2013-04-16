@@ -2,7 +2,7 @@ class CreateScenes < ActiveRecord::Migration
   def change
     create_table :scenes do |t|
       t.string :name
-      t.string :location
+      t.integer :location_id
       t.integer :act
       t.integer :chapter
       t.references :story

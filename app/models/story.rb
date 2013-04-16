@@ -5,4 +5,6 @@ class Story < ActiveRecord::Base
   has_many :locations, :through => :scenes
   has_many :characters, :through => :scenes
 
+#TODO: good canadate for  accepts_nested_attributes_for method
+
 end

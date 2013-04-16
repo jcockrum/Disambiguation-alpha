@@ -72,12 +72,12 @@ ActiveRecord::Schema.define(:version => 20130408202423) do
 
   create_table "scenes", :force => true do |t|
     t.string   "name"
-    t.string   "location"
+    t.integer  "location_id"
     t.integer  "act"
     t.integer  "chapter"
     t.integer  "story_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   add_index "scenes", ["story_id"], :name => "index_scenes_on_story_id"

@@ -1,5 +1,5 @@
 class Scene < ActiveRecord::Base
-    attr_accessible :name, :location, :act, :chapter
+    attr_accessible :name, :location_id, :act, :chapter
   	belongs_to :story
   	
     has_many :plotlines, :dependent => :destroy
