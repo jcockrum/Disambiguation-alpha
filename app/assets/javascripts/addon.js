@@ -64,7 +64,7 @@
 			
 		}).each(function() {
 			var menuClasses = [c.menuClass];
-			if (sf.op.dropShadows  && !($.browser.msie && $.browser.version < 7)) menuClasses.push(c.shadowClass);
+			if (sf.op.dropShadows  && !( $.browser.version < 7)) menuClasses.push(c.shadowClass);
 			$(this).addClass(menuClasses.join(' '));
 		});
 	};
@@ -74,7 +74,7 @@
 	sf.op = {};
 	sf.IE7fix = function(){
 		var o = sf.op;
-		if ($.browser.msie && $.browser.version > 6 && o.dropShadows && o.animation.opacity!=undefined)
+		if ($.browser.version > 6 && o.dropShadows && o.animation.opacity!=undefined)
 			this.toggleClass(sf.c.shadowClass+'-off');
 		};
 	sf.c = {
@@ -150,7 +150,7 @@ var style = document.createElement('div').style,
     webkit = style['WebkitBorderRadius'] !== undefined,
     radius = style['borderRadius'] !== undefined || style['BorderRadius'] !== undefined,
     mode = document.documentMode || 0,
-    noBottomFold = $.browser.msie && (($.browser.version < 8 && !mode) || mode < 8),
+    noBottomFold = (($.browser.version < 8 && !mode) || mode < 8),
 
     expr = $.browser.msie && (function() {
         var div = document.createElement('div');
