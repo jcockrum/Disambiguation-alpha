@@ -1,5 +1,20 @@
 Disambiguation::Application.routes.draw do
 
+  resources :scenes
+
+
+  resources :stories
+
+
+  resources :locations
+
+
+  resources :characters
+
+
+  resources :universes
+
+
 #Authentication
     devise_for :users
     resources :users

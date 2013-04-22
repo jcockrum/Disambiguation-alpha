@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @scene.name %>
+</p>
+
+<p>
+  <b>Branch:</b>
+  <%= @scene.branch %>
+</p>
+
+<p>
+  <b>Universe:</b>
+  <%= @scene.universe %>
+</p>
+
+
+<%= link_to 'Edit', edit_scene_path(@scene) %> |
+<%= link_to 'Back', scenes_path %>
