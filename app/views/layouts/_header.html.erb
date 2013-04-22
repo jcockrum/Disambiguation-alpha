@@ -1,17 +1,30 @@
-<header id="page_header" role="banner">
-    <%= link_to "Disambiguation", root_path%>
-    <%= render 'layouts/devise_nav' %>
-        <nav id="main_nav">
-            <ul>
-               <li><%= link_to 'Users', users_path%></li> 
-               <li><%= link_to 'Universes', universes_path%> </li>
-               <% if current_universe %>
-                   <li><%= link_to 'Characters', universe_characters_path(current_universe) %></li>  
-                   <li><%= link_to 'Locations', universe_locations_path(current_universe) %> </li> 
-                   <li><%= link_to 'Scenes', universe_scenes_path(current_universe) %> </li> 
-                   <li><%= link_to 'Stories', universe_stories_path(current_universe) %></li> 
-               <% end %> 
-            </ul>
-        </nav>
-</header>
-<!-- <%# add menu logic %>-->
+         <div class="hd"> 
+            <div id="container-top"></div>  
+            <div id="banner"></div>  
+            <div id="hmenu-wpr"> 
+              <ul id="hmenu" class="sf-menu sf-js-enabled sf-shadow">
+                <li class="current" style="border:none"> <a class="toplvl sf-with-ul" href="#">Home</a> </li>
+                
+                <li> <a href="#" class="toplvl">Universes</a>  
+                      <ul>
+                        <li> <a href="#">Locations</a></li>
+                        <li class="current"><a href="#">Characters</a></li>
+                        <li> <a href="#">Scenes</a></li>
+                        <li> <a href="#">Stories</a>  
+                          <ul>
+                            <li><a href="#">Create Story</a></li>
+                            <li><a href="#">Play Story</a></li>
+                          </ul> 
+                        </li>
+                      </ul> 
+                </li>
+                
+                <li><a href="#" class="toplvl">Authentication</a>  
+                  <ul>
+                    <li class="current"> <a href="#">Login</a></li>
+                    <li><a href="#">logout</a></li>
+                  </ul> 
+                </li>
+              </ul><!--end hmenu --> 
+            </div> 
+          </div>

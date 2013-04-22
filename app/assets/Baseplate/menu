@@ -1,7 +1,0 @@
-<div id='cssmenu'>
-<ul>
-   <li><a href='#'><span>Login/logout</span></a></li>
-   <li><a href='#'><span>Register/Mod_account</span></a></li>
-   <li class='last'><a href='#'><span>IF(Admin)</span></a></li>
-</ul>
-</div>
