@@ -11,53 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408202423) do
-
-  create_table "branches", :force => true do |t|
-    t.string   "name"
-    t.integer  "scene_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "branches", ["scene_id"], :name => "index_branches_on_scene_id"
-
-  create_table "characters", :force => true do |t|
-    t.string   "name"
-    t.string   "discipline"
-    t.string   "approach"
-    t.string   "efficacy"
-    t.string   "regard"
-    t.integer  "scene_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "characters", ["scene_id"], :name => "index_characters_on_scene_id"
-
-  create_table "locations", :force => true do |t|
-    t.string   "name"
-    t.integer  "scene_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "locations", ["scene_id"], :name => "index_locations_on_scene_id"
-
-  create_table "parts", :force => true do |t|
-    t.text     "content"
-    t.integer  "partible_id"
-    t.string   "partible_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "plotlines", :force => true do |t|
-    t.integer  "scene_id"
-    t.integer  "branch_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130315052028) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -69,57 +23,6 @@ ActiveRecord::Schema.define(:version => 20130408202423) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
-
-  create_table "scenes", :force => true do |t|
-    t.string   "name"
-    t.integer  "location_id"
-    t.integer  "act"
-    t.integer  "chapter"
-    t.integer  "story_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "scenes", ["story_id"], :name => "index_scenes_on_story_id"
-
-  create_table "societies", :force => true do |t|
-    t.string   "name"
-    t.string   "social_material"
-    t.string   "social_interaction"
-    t.string   "economics"
-    t.integer  "location_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
-  add_index "societies", ["location_id"], :name => "index_societies_on_location_id"
-
-  create_table "stories", :force => true do |t|
-    t.string   "name"
-    t.integer  "storyarc_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "stories", ["storyarc_id"], :name => "index_stories_on_storyarc_id"
-
-  create_table "storyarcs", :force => true do |t|
-    t.string   "name"
-    t.integer  "universe_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "storyarcs", ["universe_id"], :name => "index_storyarcs_on_universe_id"
-
-  create_table "universes", :force => true do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "universes", ["user_id"], :name => "index_universes_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

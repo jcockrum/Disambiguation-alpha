@@ -1,9 +1,0 @@
-<h1><%= link_to 'Location', scene_locations_path(@scene) %></h1>
-
-<table>
-    <tr> <th>Name</th> </tr>
-    <% @scene.locations.each do |location| %>
-    	<tr> <td><%= link_to location.name, location_path(location) %></td> </tr>
-    <% end %>
-</table>
-
