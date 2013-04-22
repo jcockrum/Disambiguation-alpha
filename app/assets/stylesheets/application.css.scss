@@ -36,17 +36,23 @@ header#page_header{background-color:#A9A9F5;color:#fff;overflow:hidden;
 
 
 // authentication menu
-nav#auth_menu{ background:url(menu_background.png) no-repeat; background-size:cover; 
-    display:inline;
-}
-#auth_menu{   
-  float:right;list-style:none; height:100px;padding-left:50px;padding-top:10;width:150px;
-}
+nav#auth_menu{ background:url(menu_background.png) no-repeat; background-size:cover; display:inline;}
+#auth_menu{float:right;list-style:none; height:100px;padding-left:50px;padding-top:10;width:150px;}
 #auth_menu ul{list-style:none;margin:0;padding:0;}
 #auth_menu a:active{color:#dbdbdb;}
 #auth_menu a:hover{color:#595959;}
 #auth_menu a:visited{text-decoration:line-through;}
 #auth_menu a:link{color:#b8b8b8;display:block;font-family:Trebuchet MS;font-size:14px;font-weight:400;height:23px;padding:8px 0 0;text-decoration:none;}
+
+/* Main nav */
+#main_nav{background:#efefef;border-bottom:1px solid #666;float:left;font-size:93%;line-height:normal;width:100%;}
+#main_nav ul{list-style:none;margin:0;padding:10px 10px 0 50px;}
+#main_nav li{display:inline;margin:0;padding:0;}
+#main_nav a{background:url(images/tableftF.gif) no-repeat left top;float:left;margin:0;padding:0 0 0 4px;text-decoration:none;}
+#main_nav a span{background:url(images/tabrightF.gif) no-repeat right top;color:#666;display:block;float:none;padding:5px 15px 4px 6px;}
+#main_nav .active a span,#main_nav a:hover span{background-position:100% -42px;color:#FFF;}
+#main_nav .active a,#main_nav a:hover{background-position:0 -42px;}
+
 
 /* Main */
 #wrapper{height:auto!important;margin:0 auto;min-height:100%;width:1000px;}
