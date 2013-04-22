@@ -14,6 +14,7 @@ user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => EN
 puts 'user: ' << user.name
 user.add_role :admin
 
+puts 'CHARACTERS'
 Character.create([
   { :name => "char 1", :universe_id => 1, :created_at => "2013-04-19 07:58:04", :updated_at => "2013-04-19 07:58:04" },
   { :name => "Char 2", :universe_id => 1, :created_at => "2013-04-19 07:58:15", :updated_at => "2013-04-19 07:58:15" },
@@ -31,7 +32,7 @@ Character.create([
 ], :without_protection => true )
 
 
-
+puts 'EVENTS'
 Event.create([
   { :location_id => 3, :scene_id => 7, :created_at => "2013-04-19 09:32:57", :updated_at => "2013-04-19 09:32:57" },
   { :location_id => 6, :scene_id => 8, :created_at => "2013-04-19 23:55:02", :updated_at => "2013-04-19 23:55:02" },
@@ -48,7 +49,7 @@ Event.create([
 ], :without_protection => true )
 
 
-
+puts 'LOCATIONS'
 Location.create([
   { :name => "The Hill", :universe_id => 1, :created_at => "2013-04-19 09:29:31", :updated_at => "2013-04-19 09:29:31" },
   { :name => "The Forest", :universe_id => 1, :created_at => "2013-04-19 09:29:45", :updated_at => "2013-04-19 09:29:45" },
@@ -70,7 +71,7 @@ Location.create([
 ], :without_protection => true )
 
 
-
+puts 'NPCS'
 Npc.create([
   { :character_id => 1, :scene_id => 2, :created_at => "2013-04-19 08:57:10", :updated_at => "2013-04-19 08:57:10" },
   { :character_id => 2, :scene_id => 2, :created_at => "2013-04-19 08:57:10", :updated_at => "2013-04-19 08:57:10" },
@@ -95,7 +96,7 @@ Npc.create([
 ], :without_protection => true )
 
 
-
+puts 'PARTS'
 Part.create([
   { :content => "this is app", :partible_id => 1, :partible_type => "Universe", :created_at => "2013-04-18 15:14:50", :updated_at => "2013-04-18 15:14:50" },
   { :content => "Universe the second", :partible_id => 2, :partible_type => "Universe", :created_at => "2013-04-19 23:18:33", :updated_at => "2013-04-19 23:18:33" },
@@ -123,14 +124,14 @@ Part.create([
 ], :without_protection => true )
 
 
-
+puts 'SCENES'
 Scene.create([
   { :name => "Unbound",  :universe_id => 2, :created_at => "2013-04-19 23:55:02", :updated_at => "2013-04-19 23:55:02" },
   { :name => "Before the Storm", :universe_id => 2, :created_at => "2013-04-22 06:24:28", :updated_at => "2013-04-22 06:24:28" }
 ], :without_protection => true )
 
 
-
+puts 'STORIES'
 Story.create([
   { :name => "Main Story", :universe_id => 2, :created_at => "2013-04-20 00:32:44", :updated_at => "2013-04-20 00:32:44" },
   { :name => "The College of the Winterhold", :universe_id => 2, :created_at => "2013-04-20 00:44:06", :updated_at => "2013-04-22 04:42:25" },
@@ -140,7 +141,7 @@ Story.create([
 ], :without_protection => true )
 
 
-
+puts 'STORYLINES'
 Storyline.create([
   { :story_id => 4, :scene_id => 5, :created_at => "2013-04-20 17:34:19", :updated_at => "2013-04-20 17:34:19" },
   { :story_id => 5, :scene_id => 5, :created_at => "2013-04-20 17:44:21", :updated_at => "2013-04-20 17:44:21" },
@@ -148,9 +149,8 @@ Storyline.create([
 ], :without_protection => true )
 
 
-
+puts 'UNIVERSES'
 Universe.create([
   { :name => "test 1", :created_at => "2013-04-18 15:14:33", :updated_at => "2013-04-18 15:14:33" },
   { :name => "test 2", :created_at => "2013-04-19 23:18:22", :updated_at => "2013-04-19 23:18:22" }
 ], :without_protection => true )
-
