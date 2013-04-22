@@ -1,19 +1,5 @@
 Disambiguation::Application.routes.draw do
 
-  resources :scenes
-
-
-  resources :stories
-
-
-  resources :locations
-
-
-  resources :characters
-
-
-  resources :universes
-
 
 #Authentication
     devise_for :users
@@ -21,29 +7,19 @@ Disambiguation::Application.routes.draw do
 
     #Site Content
     resources :universes, :shallow => true do
+        resources :stories          
         resources :parts, :only => [:index, :create, :new]
-        resources :storyarcs do
+        resources :characters, :scenes do
+            resources :npcs , :only => [:index, :create, :new]
             resources :parts, :only => [:index, :create, :new]
-            resources :stories do
-                resources :scenes do
-                    resources :parts, :only => [:index, :create, :new]
-                    resources :branches do
-                        resources :parts, :only => [:index, :create, :new]
-                    end
-                    resources :characters do
-                        resources :parts, :only => [:index, :create, :new]
-                    end
-                    resources :locations do
-                        resources :parts, :only => [:index, :create, :new]
-                        resources :societies
-                    end
-                end
-            end
-
+        end
+        resources :locations do
+            resources :parts, :only => [:index, :create, :new]
         end
     end
-
+        
     resources :parts,:only => [:update, :destroy]
+    resources :npcs,:only => [:update, :destroy]
 
     #Homepages
     authenticated :user do

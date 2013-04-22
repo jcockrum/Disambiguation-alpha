@@ -2,15 +2,18 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem "mysql2", ">= 0.3.11"
-gem 'jquery-rails'
+gem "simple_form", ">= 2.0.4"
+gem 'inherited_resources'
 gem "best_in_place"
 gem "twitter-bootstrap-rails"
 gem "devise", ">= 2.2.3"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
-gem "simple_form", ">= 2.0.4"
-gem 'inherited_resources'
 gem "figaro", ">= 0.5.3"
+#java
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'cocoon'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -30,9 +33,10 @@ group :test do
 end
 
 group :development do
+  gem 'rails-erd'
+  gem 'seed_dump'
   gem 'webrick', '~> 1.3.1'
-  gem "hub", ">= 1.10.2", :require => nil
   gem 'better_errors', '>= 0.6.0'
   gem 'binding_of_caller', '>= 0.7.1', :platforms => [:mri_19, :rbx]
-  gem "rails-erd"
+  gem "hub", ">= 1.10.2", :require => nil
 end
