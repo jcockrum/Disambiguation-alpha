@@ -1,20 +1,18 @@
-<p id="notice"><%= notice %></p>
+<h1>The Scene "<%= @scene.name %>"</h1>
+<h2>In the "<%= @scene.universe.name %>" Universe</h2>
 
 <p>
-  <b>Name:</b>
-  <%= @scene.name %>
+  <b>Characters:</b>
+  <%= @scene.characters.map(&:name).join(", ") %>
 </p>
 
 <p>
-  <b>Branch:</b>
-  <%= @scene.branch %>
-</p>
-
-<p>
-  <b>Universe:</b>
-  <%= @scene.universe %>
+  <b>Location:</b>
+  <%= @scene.locations.map(&:name).join(", ") %>
 </p>
 
 
-<%= link_to 'Edit', edit_scene_path(@scene) %> |
-<%= link_to 'Back', scenes_path %>
+<%= render 'parts/parts' %> 
+
+<%= link_to 'Back Scenes', universe_scenes_path(@scene.universe_id) %>
+<%= link_to 'Edit', edit_scene_path(@scene) %>

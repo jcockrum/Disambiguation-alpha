@@ -1,27 +1,17 @@
-<h1>Listing scenes</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Branch</th>
-    <th>Universe</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Scenes</h1>
 
 <% @scenes.each do |scene| %>
-  <tr>
-    <td><%= scene.name %></td>
-    <td><%= scene.branch %></td>
-    <td><%= scene.universe %></td>
-    <td><%= link_to 'Show', scene %></td>
-    <td><%= link_to 'Edit', edit_scene_path(scene) %></td>
-    <td><%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="scene">
+    <h2><%= link_to scene.name, scene %></h2>
+    <div class="details">
+      Title:      <%= best_in_place scene, :name, :type => :input %>  |
+      Characters: <%= scene.characters.map(&:name).join(", ") %>   |
+      Location:   <%= scene.locations.map(&:name).join(", ") %>   |
+      <%= link_to 'Show', scene %>
+      <%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Scene', new_scene_path %>
+<%= link_to 'Back to Universe', universe_path(@universe) %>
+<%= link_to 'New scene', new_universe_scene_path(@universe) %>

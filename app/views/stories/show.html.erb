@@ -6,15 +6,15 @@
 </p>
 
 <p>
-  <b>Chapter:</b>
-  <%= @story.chapter %>
+  <b>Universe:</b>
+  <%= @story.universe.name %>
 </p>
 
 <p>
-  <b>Universe:</b>
-  <%= @story.universe %>
+  <b>Scene:</b>
+  <%= @story.scenes.map(&:name).join(", ") %>
 </p>
 
 
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<%= link_to 'Back', universe_stories_path(current_universe) %>
+<%= link_to 'Edit', edit_story_path(@story) %>

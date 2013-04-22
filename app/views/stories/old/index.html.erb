@@ -11,10 +11,9 @@
 
 <% @stories.each do |story| %>
   <tr>
-    <td><td><%= best_in_place story, :name, :type => :input %></td></td>
+    <td><%= story.name %></td>
     <td><%= story.universe.name %></td>
     <td><%= link_to 'Show', story %></td>
-    <td><%= link_to 'Edit', edit_story_path(story)%></td>
     <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -22,4 +21,5 @@
 
 <br />
 
+<%= link_to 'Back to Universe', universe_path(@universe) %>
 <%= link_to 'New Story', new_universe_story_path(@universe) %>

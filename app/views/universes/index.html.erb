@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,10 +10,8 @@
 
 <% @universes.each do |universe| %>
   <tr>
-    <td><%= universe.name %></td>
-    <td><%= universe.user_id %></td>
+    <td> <%= best_in_place universe, :name, :type => :input %></td>
     <td><%= link_to 'Show', universe %></td>
-    <td><%= link_to 'Edit', edit_universe_path(universe) %></td>
     <td><%= link_to 'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

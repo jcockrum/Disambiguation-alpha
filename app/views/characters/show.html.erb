@@ -7,9 +7,9 @@
 
 <p>
   <b>Universe:</b>
-  <%= @character.universe %>
+  <%= @character.universe.name %>
 </p>
 
+<%= render 'parts/parts' %> 
 
-<%= link_to 'Edit', edit_character_path(@character) %> |
-<%= link_to 'Back', characters_path %>
+<%= link_to 'Back', universe_characters_path(current_universe) %>

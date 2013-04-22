@@ -1,6 +1,6 @@
-<h1>Editing story</h1>
+<h1>Story</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @story %> |
-<%= link_to 'Back', stories_path %>
+<%= link_to 'Back to Story', universe_stories_path(@story.universe_id) %>
+<%= link_to 'Back', story_path(@story) %>

@@ -1,0 +1,8 @@
+<table id="parts">
+  <% @parts.each do |part| %>
+    <tr>
+	    <td><%= best_in_place part, :content, :type => :textarea %></td>
+	    <td><%= button_to "Delete", part,:confirm => 'Are you sure?',:method => :delete %> </td> 
+    </tr>
+  <% end %>
+</table>
