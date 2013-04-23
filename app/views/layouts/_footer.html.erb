@@ -1,6 +1,7 @@
             <div class="ft">
                 <div id="footer">
                     <div class="content">
+                        <% if current_user %> <h2>Hello <%= current_user.name %></h2> <% end %>
                         <h4>Currently at <%= current_universe%></h4>
                         <p> <a href="http://www.dotemplate.com">Templates</a> builder </p>
                     </div> <!-- content -->

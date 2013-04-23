@@ -6,6 +6,11 @@ class UniversesController < InheritedResources::Base
       index!
     end
     
+    def new
+        @universes = Universe.all #for navmenu
+        new!
+    end
+    
     def show
         @universe = Universe.find params[:id]
         session[:universe_id] = @universe.id

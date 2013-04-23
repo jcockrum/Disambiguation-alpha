@@ -1,18 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @story.name %>
+  <%= @story.name %> in <%= @story.universe.name %> Universe<br />
 </p>
 
 <p>
-  <b>Universe:</b>
-  <%= @story.universe.name %>
-</p>
-
-<p>
-  <b>Scene:</b>
-  <%= @story.scenes.map(&:name).join(", ") %>
+  <%#@story.scenes.map(&:name).join(", ") 
+  %>
+  <% @story.scenes.map do |scene| %>
+     <b>Scene:</b> #<%= scene.id %> <%= scene.name %> <br />
+        <table id="parts">
+          <% scene.parts.each do |part| %>
+            <tr>
+                <td><%= best_in_place part, :content, :type => :textarea %></td> 
+            </tr>
+          <% end %>
+        </table>  
+  <% end %>
 </p>
 
 
