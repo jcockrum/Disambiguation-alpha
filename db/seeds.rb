@@ -28,6 +28,16 @@ Character.create([
   { :name => "Hadvar", :universe_id => 2, :created_at => "2013-04-22 05:39:30", :updated_at => "2013-04-22 05:39:30" },
   { :name => "Gunjar", :universe_id => 2, :created_at => "2013-04-22 05:40:03", :updated_at => "2013-04-22 05:40:03" },
   { :name => "Gerdur", :universe_id => 2, :created_at => "2013-04-22 05:40:27", :updated_at => "2013-04-22 05:40:27" },
+  { :name => "Alvor", :universe_id => 2, :created_at => "2013-04-22 05:40:57", :updated_at => "2013-04-22 05:40:57" },
+  { :name => "Aela the Huntress", :universe_id => 2, :created_at => "2013-04-19 23:26:03", :updated_at => "2013-04-19 23:26:03" },
+  { :name => "Barbas", :universe_id => 2, :created_at => "2013-04-19 23:26:58", :updated_at => "2013-04-19 23:26:58" },
+  { :name => "Elisif the Fair", :universe_id => 2, :created_at => "2013-04-19 23:28:18", :updated_at => "2013-04-19 23:28:18" },
+  { :name => "Ralof", :universe_id => 2, :created_at => "2013-04-22 05:38:13", :updated_at => "2013-04-22 05:38:13" },
+  { :name => "Ulfric Stormcloak ", :universe_id => 2, :created_at => "2013-04-22 05:38:45", :updated_at => "2013-04-22 05:38:45" },
+  { :name => "Alduin", :universe_id => 2, :created_at => "2013-04-22 05:39:06", :updated_at => "2013-04-22 05:39:06" },
+  { :name => "Hadvar", :universe_id => 2, :created_at => "2013-04-22 05:39:30", :updated_at => "2013-04-22 05:39:30" },
+  { :name => "Gunjar", :universe_id => 2, :created_at => "2013-04-22 05:40:03", :updated_at => "2013-04-22 05:40:03" },
+  { :name => "Gerdur", :universe_id => 2, :created_at => "2013-04-22 05:40:27", :updated_at => "2013-04-22 05:40:27" },
   { :name => "Alvor", :universe_id => 2, :created_at => "2013-04-22 05:40:57", :updated_at => "2013-04-22 05:40:57" }
 ], :without_protection => true )
 
@@ -45,7 +55,10 @@ Event.create([
   { :location_id => 14, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
   { :location_id => 15, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
   { :location_id => 16, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
-  { :location_id => 17, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" }
+  { :location_id => 17, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
+  { :location_id => 1, :scene_id => 3, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" },
+  { :location_id => 2, :scene_id => 3, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" },
+  { :location_id => 3, :scene_id => 3, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" }
 ], :without_protection => true )
 
 
@@ -55,7 +68,18 @@ Location.create([
   { :name => "The Forest", :universe_id => 1, :created_at => "2013-04-19 09:29:45", :updated_at => "2013-04-19 09:29:45" },
   { :name => "The Hill Top", :universe_id => 1, :created_at => "2013-04-19 09:29:57", :updated_at => "2013-04-19 09:29:57" },
   { :name => "In town", :universe_id => 1, :created_at => "2013-04-19 09:30:10", :updated_at => "2013-04-19 09:30:10" },
-  { :name => "Down town", :universe_id => 1, :created_at => "2013-04-19 09:30:23", :updated_at => "2013-04-19 09:30:23" },
+  { :name => "Dawnstar", :universe_id => 2, :created_at => "2013-04-19 23:22:46", :updated_at => "2013-04-19 23:22:46" },
+  { :name => "Falkreath", :universe_id => 2, :created_at => "2013-04-19 23:23:18", :updated_at => "2013-04-19 23:23:18" },
+  { :name => "Markarth", :universe_id => 2, :created_at => "2013-04-19 23:23:51", :updated_at => "2013-04-19 23:23:51" },
+  { :name => "Helgen", :universe_id => 2, :created_at => "2013-04-22 05:30:52", :updated_at => "2013-04-22 05:30:52" },
+  { :name => "Riverwood", :universe_id => 2, :created_at => "2013-04-22 05:41:52", :updated_at => "2013-04-22 05:41:52" },
+  { :name => "Helgen Keep", :universe_id => 2, :created_at => "2013-04-22 05:53:12", :updated_at => "2013-04-22 05:53:12" },
+  { :name => "Helgen cavern", :universe_id => 2, :created_at => "2013-04-22 05:55:15", :updated_at => "2013-04-22 05:55:15" },
+  { :name => "Helgen streets", :universe_id => 2, :created_at => "2013-04-22 05:56:11", :updated_at => "2013-04-22 05:56:11" },
+  { :name => " The Three Guardian Stones", :universe_id => 2, :created_at => "2013-04-22 06:25:06", :updated_at => "2013-04-22 06:25:06" },
+  { :name => "Alvor and Sigrid's House", :universe_id => 2, :created_at => "2013-04-22 06:26:13", :updated_at => "2013-04-22 06:26:13" },
+  { :name => "Riverwood Trader", :universe_id => 2, :created_at => "2013-04-22 06:26:40", :updated_at => "2013-04-22 06:26:40" },
+  { :name => "Sleeping Giant Inn", :universe_id => 2, :created_at => "2013-04-22 06:26:59", :updated_at => "2013-04-22 06:26:59" },
   { :name => "Dawnstar", :universe_id => 2, :created_at => "2013-04-19 23:22:46", :updated_at => "2013-04-19 23:22:46" },
   { :name => "Falkreath", :universe_id => 2, :created_at => "2013-04-19 23:23:18", :updated_at => "2013-04-19 23:23:18" },
   { :name => "Markarth", :universe_id => 2, :created_at => "2013-04-19 23:23:51", :updated_at => "2013-04-19 23:23:51" },
@@ -92,11 +116,14 @@ Npc.create([
   { :character_id => 7, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
   { :character_id => 10, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
   { :character_id => 12, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
-  { :character_id => 13, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" }
+  { :character_id => 13, :scene_id => 6, :created_at => "2013-04-22 06:28:36", :updated_at => "2013-04-22 06:28:36" },
+  { :character_id => 1, :scene_id => 3, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" },
+  { :character_id => 2, :scene_id => 3, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" },
+  { :character_id => 3, :scene_id => 3, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" }
 ], :without_protection => true )
 
 
-puts 'PARTS'
+puts 'STUFF'
 Part.create([
   { :content => "this is app", :partible_id => 1, :partible_type => "Universe", :created_at => "2013-04-18 15:14:50", :updated_at => "2013-04-18 15:14:50" },
   { :content => "Universe the second", :partible_id => 2, :partible_type => "Universe", :created_at => "2013-04-19 23:18:33", :updated_at => "2013-04-19 23:18:33" },
@@ -120,36 +147,42 @@ Part.create([
   { :content => "You eventually enter a natural cave, filled with soldiers guarding it.There are a few archers and swordsmen in the cavern, along with another soldier wearing heavy armor. ", :partible_id => 4, :partible_type => "Scene", :created_at => "2013-04-22 06:04:13", :updated_at => "2013-04-22 06:04:13" },
   { :content => "Once you've dealt with that, you will see an exit to the cave. Once free, you will see Alduin fly overhead. Ralof will direct the player to his sister, Gerdur, who lives in Riverwood, or Hadvar will direct the player to his uncle, Alvor, who lives in Riverwood.", :partible_id => 4, :partible_type => "Scene", :created_at => "2013-04-22 06:04:50", :updated_at => "2013-04-22 06:06:04" },
   { :content => "On the way to Riverwood along the path taken are three Guardian Stones: The Warrior, The Mage, and The Thief.", :partible_id => 6, :partible_type => "Scene", :created_at => "2013-04-22 06:31:39", :updated_at => "2013-04-22 06:34:24" },
-  { :content => "After arrival in the village, assuming you traveled the entire way with your Helgen-met companion, the hero is led to a house depending on who was followed in the opening quest. You will be offered a gift of supplies. All of the items offered can be taken without anyone complaining. The Riverwood contact will also recommend that a report be made to Jarl Balgruuf, in Whiterun, regarding all of the events that have transpired.", :partible_id => 6, :partible_type => "Scene", :created_at => "2013-04-22 06:31:55", :updated_at => "2013-04-22 06:35:22" }
+  { :content => "After arrival in the village, assuming you traveled the entire way with your Helgen-met companion, the hero is led to a house depending on who was followed in the opening quest. You will be offered a gift of supplies. All of the items offered can be taken without anyone complaining. The Riverwood contact will also recommend that a report be made to Jarl Balgruuf, in Whiterun, regarding all of the events that have transpired.", :partible_id => 6, :partible_type => "Scene", :created_at => "2013-04-22 06:31:55", :updated_at => "2013-04-22 06:35:22" },
+  { :content => "this is the test", :partible_id => 3, :partible_type => "Scene", :created_at => "2013-04-22 06:56:35", :updated_at => "2013-04-22 06:56:35" }
 ], :without_protection => true )
 
 
 puts 'SCENES'
 Scene.create([
-  { :name => "Unbound",  :universe_id => 2, :created_at => "2013-04-19 23:55:02", :updated_at => "2013-04-19 23:55:02" },
-  { :name => "Before the Storm", :universe_id => 2, :created_at => "2013-04-22 06:24:28", :updated_at => "2013-04-22 06:24:28" }
+  { :name => "Unbound", :branch => nil, :universe_id => 2, :created_at => "2013-04-19 23:55:02", :updated_at => "2013-04-19 23:55:02" },
+  { :name => "Before the Storm", :branch => nil, :universe_id => 2, :created_at => "2013-04-22 06:24:28", :updated_at => "2013-04-22 06:24:28" },
+  { :name => "tester 1", :branch => nil, :universe_id => 1, :created_at => "2013-04-22 06:56:18", :updated_at => "2013-04-22 06:56:18" }
 ], :without_protection => true )
 
 
 puts 'STORIES'
 Story.create([
-  { :name => "Main Story", :universe_id => 2, :created_at => "2013-04-20 00:32:44", :updated_at => "2013-04-20 00:32:44" },
-  { :name => "The College of the Winterhold", :universe_id => 2, :created_at => "2013-04-20 00:44:06", :updated_at => "2013-04-22 04:42:25" },
-  { :name => "Side Quests", :universe_id => 2, :created_at => "2013-04-20 00:44:20", :updated_at => "2013-04-20 00:44:20" },
-  { :name => "Main Story", :universe_id => 1, :created_at => "2013-04-20 17:34:19", :updated_at => "2013-04-20 17:34:19" },
-  { :name => "Main Story", :universe_id => 1, :created_at => "2013-04-20 17:44:21", :updated_at => "2013-04-20 17:44:21" }
+  { :name => "Main Story", :chapter => nil, :universe_id => 2, :created_at => "2013-04-20 00:32:44", :updated_at => "2013-04-20 00:32:44" },
+  { :name => "The College of the Winterhold", :chapter => nil, :universe_id => 2, :created_at => "2013-04-20 00:44:06", :updated_at => "2013-04-22 04:42:25" },
+  { :name => "Side Quests", :chapter => nil, :universe_id => 2, :created_at => "2013-04-20 00:44:20", :updated_at => "2013-04-20 00:44:20" },
+  { :name => "Main Story", :chapter => 1, :universe_id => 1, :created_at => "2013-04-20 17:34:19", :updated_at => "2013-04-22 07:02:14" },
+  { :name => "Main Story", :chapter => 1, :universe_id => 1, :created_at => "2013-04-20 17:44:21", :updated_at => "2013-04-22 16:52:51" }
 ], :without_protection => true )
 
 
-puts 'STORYLINES'
+puts 'STORYLINE'
 Storyline.create([
   { :story_id => 4, :scene_id => 5, :created_at => "2013-04-20 17:34:19", :updated_at => "2013-04-20 17:34:19" },
   { :story_id => 5, :scene_id => 5, :created_at => "2013-04-20 17:44:21", :updated_at => "2013-04-20 17:44:21" },
-  { :story_id => 6, :scene_id => 5, :created_at => "2013-04-20 17:47:54", :updated_at => "2013-04-20 17:47:54" }
+  { :story_id => 6, :scene_id => 5, :created_at => "2013-04-20 17:47:54", :updated_at => "2013-04-20 17:47:54" },
+  { :story_id => 4, :scene_id => 1, :created_at => "2013-04-22 07:02:14", :updated_at => "2013-04-22 07:02:14" },
+  { :story_id => 4, :scene_id => 2, :created_at => "2013-04-22 07:02:14", :updated_at => "2013-04-22 07:02:14" },
+  { :story_id => 5, :scene_id => 1, :created_at => "2013-04-22 16:52:51", :updated_at => "2013-04-22 16:52:51" },
+  { :story_id => 5, :scene_id => 2, :created_at => "2013-04-22 16:52:51", :updated_at => "2013-04-22 16:52:51" }
 ], :without_protection => true )
 
 
-puts 'UNIVERSES'
+puts 'UNIVERSE'
 Universe.create([
   { :name => "test 1", :created_at => "2013-04-18 15:14:33", :updated_at => "2013-04-18 15:14:33" },
   { :name => "test 2", :created_at => "2013-04-19 23:18:22", :updated_at => "2013-04-19 23:18:22" }

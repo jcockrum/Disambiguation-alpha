@@ -5,7 +5,7 @@
         <ul id="hmenu"
             class="sf-menu sf-js-enabled sf-shadow">
             <li class="current c1"><%= link_to 'Home', universes_path,:class => "toplvl sf-with-ul" %></li>
-            
+            <%if current_user%>
             <li> <%= link_to 'Universes', universes_path,:class => "toplvl" %>
                 <% if current_universe %>
                     <ul>
@@ -22,7 +22,7 @@
                     </ul>    
                 <% end %>
             </li>
-        
+            <% end %>
             <li>
                 <a href="#" class="toplvl">Authentication</a>
                 <ul>
