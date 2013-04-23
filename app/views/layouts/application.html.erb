@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
     <head>
         <meta name="MSSmartTagsPreventParsing" content="true" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,8 +15,7 @@
     <body class="<%= controller_name %> <%= action_name %>">
         <div id="top">
             <div class="overlay"></div>
-        </div>
-
+        </div><!-- top -->
         <div id="wrapper">
             <div class="overlay"></div>
             <div class="border-top"></div>
@@ -28,18 +27,16 @@
                         <div id="page">
                             <div id="main">
                                 <div class="content">
-                                    <%= render 'layouts/messages' %>
                                     <%= yield %>
-                                </div>
-                            </div>
-                        </div>
+                                </div><!-- content -->
+                            </div><!-- main -->
+                        </div><!-- page-->
                         <div class="clear" style="height:60px"></div>
-                    </div>
-                </div>
+                    </div><!-- bd -->
                 <%= render 'layouts/footer' %>
-            </div>
-        </div>
-        </div>
+                </div><!-- container-->
+            </div><!-- content -->
+        </div><!-- wrapper -->
         <div class="clear"></div>
     </body>
 </html>

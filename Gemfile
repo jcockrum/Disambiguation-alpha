@@ -13,6 +13,7 @@ gem "figaro", ">= 0.5.3"
 #java
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'superfish-rails'
 gem 'cocoon'
 
 group :assets do
