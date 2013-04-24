@@ -4,7 +4,6 @@ class PartsController  < InheritedResources::Base
         belongs_to :character, :location, :scene, :polymorphic => true, :optional => true 
     end
 
-    
     def create
         create!(:notice => "got it.") { redirect_to :back and return}
     end

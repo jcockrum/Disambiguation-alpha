@@ -8,6 +8,7 @@ class StoriesController < InheritedResources::Base
 
     def edit
         @story = Story.find params[:id]
+        @parts = Part.where(:scene => params[:scene])
     end
 
     def update
