@@ -36,7 +36,7 @@ body{width:100%;display:table;}
 #top{position:relative;height:20px;width:100%;background-color:#141414;background-position:center top;background-repeat:repeat-x;background-image:url("top-bg.png");}
 #top .overlay{background-image:none;}
 #wrapper{width:100%;background-color:#FFF;background-position:center top;background-repeat:repeat-x;background-image:url('wrapper-bg.png');}
-#wrapper .overlay{position:absolute;height:500px;width:1400px;background-color:transparent;margin-left:-700px;left:50%;background-repeat:no-repeat;background-image:url("wrapper-img.png");background-position:center top;}
+#wrapper .overlay{position:absolute;height:500px;width:1352px;background-color:transparent;margin-left:-700px;left:50%;background-repeat:no-repeat;background-image:url("wrapper-img.png");background-position:center top;}
 #wrapper .border-top{position:absolute;height:25px;width:100%;background-color:transparent;background-repeat:repeat-x;background-image:url("wrapper-borderTop.png");background-position:center top;}
 #container{position:relative;width:1150px;margin:0 auto;}
 #container .hd{height:250px;width:100%;background-color:transparent;margin:0 auto;background-image:url("container-hd.png");background-position:center top;}
@@ -126,3 +126,8 @@ a:focus > .sf-sub-indicator,a:hover > .sf-sub-indicator,a:active > .sf-sub-indic
 .sidebox2 .vmenu ul li a:link,.sidebox2 .vmenu ul li a:visited{letter-spacing:normal;color:#333;text-transform:normal;font-style:normal;font-size:12px;font-family:Helvetica, Arial, sans-serif;text-decoration:none;font-weight:400;}
 .sidebox2 .vmenu ul li a:hover{}
 .sidebox2 p{text-align:justify;}
+
+/* image bar */
+div.imagebar{margin:2px;height:auto;width:auto;float:right;text-align:center;background-color:transparent}
+div.img img{display:inline;margin:3px;border:1px solid #fff;}
+div.img a:hover img{border:1px solid #00f;}

@@ -1,10 +1,29 @@
-            <div class="ft">
-                <div id="footer">
-                    <div class="content">
-                        <% if current_user %> <h2>Hello <%= current_user.name %></h2> <% end %>
-                        <h4>Currently at <%= current_universe%></h4>
-                        <p> <a href="http://www.dotemplate.com">Templates</a> builder </p>
-                    </div> <!-- content -->
-                </div> <!-- footer -->
-                <div id="container-bottom"></div>
-            </div>
+<div class="ft">
+    <div id="footer">
+        <div class="content">
+            <% if current_user %> <h2>Hello <%= current_user.name %></h2> <% end %>
+            <p>
+                Page template sourced from <a href="http://www.dotemplate.com">dotemplate</a>
+            </p>
+            <h4>DEBUG=> Current Universe: #<%= current_universe%></h4>
+            <h3 align="center";>Disambiguation <=> By John Cockrum</h3>
+        </div>
+        <!-- content -->
+    </div>
+    <!-- footer -->
+    <div id="container-bottom"> </div>
+    <div id="container-bottom">
+        <% #TODO: Convert at jpg's to png's and add image cycling
+           #TODO: add links
+        %>
+        <div class="imagebar">
+            <%= image_tag("rails_2.png",   :size => "50x60", :alt => "Ruby on Rails") %>
+            <%= image_tag("mysql_1.png",   :size => "60x60", :alt => "MySQL") %>
+            <%= image_tag("html5_1.png",   :size => "60x60", :alt => "HTML5") %>
+            <%= image_tag("css3_1.png",    :size => "60x60", :alt => "CSS3") %>
+            <%= image_tag("ubuntu_5.png",  :size => "60x60", :alt => "Ubuntu") %>
+            <%= image_tag("aptana_2.png",  :size => "60x60", :alt => "Aptana(RadRails) 3") %>
+            <%= image_tag("turnkey_1.jpg", :size => "60x60", :alt => "TurnKey Ruby") %>
+        </div>        
+    </div>
+</div>
