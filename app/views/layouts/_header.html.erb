@@ -4,27 +4,17 @@
     <div id="hmenu-wpr">
         <ul id="hmenu"
             class="sf-menu sf-js-enabled sf-shadow">
-            <li class="current c1"><%= link_to 'Home', universes_path,:class => "toplvl sf-with-ul" %></li>
             <%if current_user%>
-            <li> <%= link_to 'Universes', universes_path,:class => "toplvl" %>
+            <li class="current c1"><%= link_to 'Home', universes_path,:class => "toplvl sf-with-ul" %></li>
                 <% if current_universe %>
-                    <ul>
-                        <li class="current"><%= link_to 'Characters', universe_characters_path(current_universe) %></li>
-                        <li><%= link_to 'Locations', universe_locations_path(current_universe) %></li>
-                        <li><%= link_to 'Scenes', universe_scenes_path(current_universe) %></li>
-                        <li><%= link_to 'Stories', universe_stories_path(current_universe) %></li>
-                    </ul>
-                <% else %>
-                    <ul>
-                    <% @universes.each do |universe| %>
-                        <li><%= link_to universe.name, universe %></li>
-                    <% end %>
-                    </ul>    
+                    <li><%= link_to 'Characters', universe_characters_path(current_universe),:class => "toplvl"  %></li>
+                    <li><%= link_to 'Locations', universe_locations_path(current_universe),:class => "toplvl"  %></li>
+                    <li><%= link_to 'Scenes', universe_scenes_path(current_universe),:class => "toplvl"  %></li>
+                    <li><%= link_to 'Stories', universe_stories_path(current_universe),:class => "toplvl"  %></li>
                 <% end %>
             </li>
             <% end %>
-            <li>
-                <a href="#" class="toplvl">Authentication</a>
+            <li><a href="#" class="toplvl">Authentication</a>
                 <ul>
                     <% if user_signed_in? %>
                         <li class="current"> <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
