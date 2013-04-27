@@ -1,21 +1,22 @@
-<h1>Listing universes</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-  </tr>
+                    <div class="bd">
+                        <div id="page">
+                            <!--SIDE 1 -->
+                            <div id="main">
+                                <div class="content">
+                                    <%= render "index"%>
+                                </div><!-- content -->
+                            </div><!-- main -->
+                            <!-- SIDE 2-->
+                        </div><!-- page-->
+                        <div class="clear" style="height:60px"></div>
+                    </div><!-- bd -->
 
-<% @universes.each do |universe| %>
-  <tr>
-    <td> <%= best_in_place universe, :name, :type => :input %></td>
-    <td><%= link_to 'Show', universe %></td>
-    <td><%= link_to 'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :recent_universes do %>
+<h1>Recent Universes</h1>
+    <ul>
+        <% @recent_universes.each do |universe| %>
+        <li><%= link_to universe.name, universe %></li>
+        <% end %>
+    </ul>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Universe', new_universe_path %>

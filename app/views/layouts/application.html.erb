@@ -19,26 +19,15 @@
         <div id="wrapper">
             <div class="overlay"></div>
             <div class="border-top"></div>
-
             <div class="content">
                 <div id="container">
                     <%= render 'layouts/header' %>
-                    <div class="bd">
-                        <div id="page">
-                            <!--SIDE 1 -->
-                            <div id="main">
-                                <div class="content">
-                                    <%= yield %>
-                                </div><!-- content -->
-                            </div><!-- main -->
-                            <!-- SIDE 2-->
-                        </div><!-- page-->
-                        <div class="clear" style="height:60px"></div>
-                    </div><!-- bd -->
-                <%= render 'layouts/footer' %>
+                    <%= yield %>
+                    <%= render 'layouts/footer' %>
                 </div><!-- container-->
             </div><!-- content -->
         </div><!-- wrapper -->
         <div class="clear"></div>
     </body>
+    
 </html>

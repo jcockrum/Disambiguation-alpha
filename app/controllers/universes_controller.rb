@@ -3,7 +3,8 @@ class UniversesController < InheritedResources::Base
     
     def index
       session[:universe_id] = nil
-      index!
+      @universes = Universe.where(:user_id => current_user.id)
+      @recent_universes = Universe.recent_universes.author(current_user.id)
     end
     
     def new
@@ -18,6 +19,17 @@ class UniversesController < InheritedResources::Base
         @parts = @partible.parts
         @part = Part.new        
     end
+    
+      def create
+        @universe = Universe.new(params[:universe])
+        @universe.user_id = current_user.id
+        if @universe.save
+          redirect_to @universe, notice: "Successfully created universe."
+        else
+          render :new
+        end
+      end
+    
     def update
         @universe = Universe.find(params[:id])
         respond_to do |format|
