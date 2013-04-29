@@ -1,15 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @character.name %>
-</p>
 
-<p>
-  <b>Universe:</b>
-  <%= @character.universe.name %>
-</p>
 
-<%= render 'parts/parts' %> 
+                            <!--SIDE 1 -->
+                            <div id="main">
+                                <div class="content">
+                                    <p id="notice"><%= notice %></p>
+                                    <p><b>Universe: </b><%= @character.universe.name %></p>
+                                    <p><b>Name: </b><%= @character.name %></p>
+                                    <%= render 'parts/parts' %> 
+                                    <%= link_to 'Back', universe_characters_path(current_universe) %>
+                                </div><!-- content -->
+                            </div><!-- main -->
+                            <!-- SIDE 2-->
 
-<%= link_to 'Back', universe_characters_path(current_universe) %>
+

@@ -1,0 +1,25 @@
+<h1>Listing locations</h1>
+
+<table class="table1">
+  <tr>
+    <th>Name</th>
+    <th>Universe</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @locations.each do |location| %>
+  <tr>
+    <td><%= best_in_place location, :name, :type => :input %></td>
+    <td><%= location.universe.name %></td>
+    <td><%= location.scenes.map(&:name).join(", ") %></td>
+    <td><%= link_to 'Show', location %></td>
+    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Back to universe', universe_path(@universe) %>
+<%= link_to 'New location', new_universe_location_path(@universe) %>

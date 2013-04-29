@@ -1,25 +1,9 @@
-<h1>Listing stories</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Universe</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @stories.each do |story| %>
-  <tr>
-    <td><td><%= best_in_place story, :name, :type => :input %></td></td>
-    <td><%= story.universe.name %></td>
-    <td><%= link_to 'Show', story %></td>
-    <td><%= link_to 'Edit', edit_story_path(story)%></td>
-    <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Story', new_universe_story_path(@universe) %>
+ 
+ 
+                            <!--SIDE 1 -->
+                            <div id="main">
+                                <div class="content">
+                                    <%= render "index"%>
+                                </div><!-- content -->
+                            </div><!-- main -->
+                            <!-- SIDE 2-->

@@ -1,0 +1,17 @@
+<h1>Scenes</h1>
+
+<% @scenes.each do |scene| %>
+  <div class="scene">
+    <h2><%= link_to scene.name, scene %></h2>
+    <div class="details">
+      Title:      <%= best_in_place scene, :name, :type => :input %>  |
+      Characters: <%= scene.characters.map(&:name).join(", ") %>   |
+      Location:   <%= scene.locations.map(&:name).join(", ") %>   |
+      <%= link_to 'Show', scene %>
+      <%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Universe', universe_path(@universe) %>
+<%= link_to 'New scene', new_universe_scene_path(@universe) %>
