@@ -22,7 +22,12 @@
             <div class="content">
                 <div id="container">
                     <%= render 'layouts/header' %>
-                    <%= yield %>
+                    <div class="bd">
+                        <div id="page">
+                            <%= yield %>
+                        </div><!-- page-->
+                        <div class="clear" style="height:60px"></div>
+                    </div><!-- bd -->
                     <%= render 'layouts/footer' %>
                 </div><!-- container-->
             </div><!-- content -->
