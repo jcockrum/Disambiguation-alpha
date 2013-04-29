@@ -1,6 +1,6 @@
 <h1>Scenes</h1>
 
-<% @scenes.each do |scene| %>
+<% @universe.scenes.each do |scene| %>
   <div class="scene">
     <h2><%= link_to scene.name, scene, title: 'View the Scene'%></h2>
     <div class="details">
