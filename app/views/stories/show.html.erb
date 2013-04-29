@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<h1>"<%= @story.name %>" in  the "<%= @story.universe.name %>" Universe</h1>
-
-<p>
-  <% @story.scenes.map do |scene| %>
-     <b>Scene:</b> "<%= scene.name %>" <br />
-        <table id="parts">
-          <tr><td><%= render scene.parts %></td></tr>
-        </table>  
-  <% end %>
-</p>
-
-<%= link_to 'Back', universe_stories_path(current_universe) %>
-<%= link_to 'Edit', edit_story_path(@story) %>
+ 
+ 
+                            <!--SIDE 1 -->
+                            <div id="main">
+                                <div class="content">
+                                    <p id="notice"><%= notice %></p>
+                                    <h1>"<%= @story.name %>" in  the "<%= @story.universe.name %>" Universe</h1>
+                                    <p>
+                                      <% @story.scenes.map do |scene| %>
+                                         <b>Scene:</b> "<%= scene.name %>" <br />
+                                            <table id="parts">
+                                              <tr><td><%= render scene.parts %></td></tr>
+                                            </table>  
+                                      <% end %>
+                                    </p>
+                                    <%= link_to 'Back', universe_stories_path(current_universe) %> | <%= link_to 'Edit', edit_story_path(@story) %>
+                                </div><!-- content -->
+                            </div><!-- main -->
+                            <!-- SIDE 2-->

@@ -1,7 +1,7 @@
 <% #TODO: BIP / js / textarea not responding as expected
 %>
 
-<table id="parts">
+<table id="parts" class="table1">
   <% @parts.each do |part| %>
     <tr>
 	    <td><%= button_to "Delete", part,:confirm => 'Are you sure?',:method => :delete %> </td>
