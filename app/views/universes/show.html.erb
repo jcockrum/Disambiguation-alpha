@@ -1,14 +1,9 @@
-
-                            <%= render 'universes/sidebar1'%>
+                            <!--SIDE 1 -->
                             <div id="main">
                                 <div class="content">
-                                    <p id="notice">
-                                        <%= notice %></p>
-                                            <p>
-                                              <b>Name:</b>
-                                              <%= @universe.name %>
-                                            </p>
-                                        <%= render 'parts/parts' %>
+                                    <p id="notice"><%= notice %></p>
+                                    <p><b>Name:</b><%= @universe.name %></p>
+                                    <%= render 'parts/parts' %>
                                 </div><!-- content -->
                             </div><!-- main -->
                             <!-- SIDE 2-->

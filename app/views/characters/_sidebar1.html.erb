@@ -4,7 +4,11 @@
             <h2>Side Box Menu</h2>
             <div class="sidebox1">
                 <h2>Side Box Heading</h2>
-                <section></section>
+                <section>
+                    <% if content_for?(:recent_universes) %>
+                    <p class='recent'><%= yield :recent_universes %></p>
+                    <% end %>
+                </section>
             </div>
         </div>
     </div>
