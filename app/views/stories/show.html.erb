@@ -7,7 +7,7 @@
                                     <h1>"<%= @story.name %>" in  the "<%= @story.universe.name %>" Universe</h1>
                                     <p>
                                       <% @story.scenes.map do |scene| %>
-                                         <b>Scene:</b> "<%= scene.name %>" <br />
+                                         <b>Scene:</b> "<%= link_to scene.name, scene %>" <br />
                                             <table id="parts">
                                               <tr><td><%= render scene.parts %></td></tr>
                                             </table>  
