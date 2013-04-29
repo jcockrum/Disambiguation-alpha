@@ -14,8 +14,8 @@
     <td><%= best_in_place location, :name, :type => :input %></td>
     <td><%= location.universe.name %></td>
     <td><%= location.scenes.map(&:name).join(", ") %></td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Details', location %></td>
+    <td><%= link_to 'Remove', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

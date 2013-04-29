@@ -2,14 +2,13 @@
 
 <% @scenes.each do |scene| %>
   <div class="scene">
-    <h2><%= link_to scene.name, scene %></h2>
+    <h2><%= link_to scene.name, scene, title: 'View the Scene'%></h2>
     <div class="details">
-      Characters: <%= scene.characters.map(&:name).join(", ") %>   |
-      Location:   <%= scene.locations.map(&:name).join(", ") %>   |
-      <%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %>
+      Characters: <%= scene.characters.map(&:name).join(", ") %> <br />  
+      Location:   <%= scene.locations.map(&:name).join(", ") %> <br />   
     </div>
+    <%= link_to 'Remove', scene, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 <% end %>
 
-<%= link_to 'Back to Universe', universe_path(@universe) %>
-<%= link_to 'New scene', new_universe_scene_path(@universe) %>
+<%= link_to 'Back to Universe', universe_path(@universe) %> | <%= link_to 'New scene', new_universe_scene_path(@universe) %>

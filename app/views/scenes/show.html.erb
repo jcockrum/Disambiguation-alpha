@@ -10,7 +10,7 @@
                                     <p><b>Location:</b><%= @scene.locations.map(&:name).join(", ") %></p>
                                     
                                     <%= render 'parts/parts' %> 
-                                    <%= link_to 'Back Scenes', universe_scenes_path(@scene.universe_id) %> | <%= link_to 'Edit', edit_scene_path(@scene) %>
+                                    <%= link_to 'Back to Scenes', universe_scenes_path(@scene.universe_id) %> | <%= link_to 'Edit', edit_scene_path(@scene) %>
                                 </div><!-- content -->
                             </div><!-- main -->
                             <!-- SIDE 2-->

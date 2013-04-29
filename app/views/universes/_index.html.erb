@@ -8,7 +8,7 @@
     
 </aside>
 
-<table>
+<table class="table1">
   <tr>
     <th>Name</th>
     <th></th>
@@ -19,7 +19,7 @@
   <tr>
     <td> <%= best_in_place universe, :name, :type => :input %></td>
     <td><%= link_to 'Show', universe %></td>
-    <td><%= link_to 'Destroy', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Remove', universe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
