@@ -6,13 +6,3 @@
                                 </div><!-- content -->
                             </div><!-- main -->
                             <!-- SIDE 2-->
-
-
-<% content_for :recent_universes do %>
-<h1>Recent Universes</h1>
-    <ul>
-        <% @recent_universes.each do |universe| %>
-        <li><%= link_to universe.name, universe %></li>
-        <% end %>
-    </ul>
-<% end %>

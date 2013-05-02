@@ -1,9 +1,14 @@
+<% if @lst_swtch == 0 %>
+    <% scene_array = @universe.scenes.collect {|x| [x.name, x.id]} %>
+<%else %>
+    <% scene_array = @scenes.collect {|x| [x.name, x.id]} %>
+<%end%>
+
 <%= simple_form_for([@universe, @story]) do |f| %>
   <%= f.error_notification %>
   <%= f.input :name %>
   <%= f.input :chapter %>
-  <%= f.association :scenes, as: :check_boxes %>
+  <%= f.association :scenes, collection: scene_array, as: :check_boxes %>
   <%= f.error :base %>
   <%= f.button :submit %>
 <% end %>
-

@@ -1,8 +1,18 @@
+ 
+<% if @lst_swtch == 0 %>
+    <% loc_array = @universe.locations.collect {|x| [x.name, x.id]} %>
+    <% char_array = @universe.characters.collect {|x| [x.name, x.id]} %>
+<%else %>
+    <% loc_array = @locations.collect {|x| [x.name, x.id]} %>
+    <% char_array = @characters.collect {|x| [x.name, x.id]} %>
+<%end%>
+
 <%= simple_form_for([@universe, @scene]) do |f| %>
   <%= f.error_notification %>
   <%= f.input :name %>
-  <%= f.association :locations, as: :check_boxes%>
-  <%= f.association :characters, as: :check_boxes %>
+
+  <%= f.association :locations, collection: loc_array, as: :check_boxes %>  
+  <%= f.association :characters, collection: char_array, as: :check_boxes %>
 
   <%= f.error :base %>
   <%= f.button :submit %>

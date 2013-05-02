@@ -1,13 +1,20 @@
 class StoriesController < InheritedResources::Base
     respond_to :html, :json
     belongs_to :universe
-
-      def show
+    
+    def show
         @story = Story.find params[:id]
-     end
+    end
+
+    def new
+        @lst_swtch = 0;
+        new!
+    end
 
     def edit
+        @lst_swtch = 1;
         @story = Story.find params[:id]
+        @scenes = Scene.where(:universe_id => @story.universe_id)
         @parts = Part.where(:scene => params[:scene])
     end
 
@@ -23,7 +30,7 @@ class StoriesController < InheritedResources::Base
             end
         end
     end
-     
+
     def destroy
         @story = Story.find params[:id]
         @story.destroy

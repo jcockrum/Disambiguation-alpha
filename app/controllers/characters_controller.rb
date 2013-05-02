@@ -28,6 +28,4 @@ class CharactersController < InheritedResources::Base
         flash[:notice] = "Successfully destroyed scene."
         redirect_to :back
     end
-
-
 end

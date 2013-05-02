@@ -4,7 +4,6 @@ class UniversesController < InheritedResources::Base
     def index
       session[:universe_id] = nil
       @universes = Universe.where(:user_id => current_user.id)
-      @recent_universes = Universe.recent_universes.author(current_user.id)
     end
     
     def new

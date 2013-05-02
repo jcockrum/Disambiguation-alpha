@@ -5,5 +5,6 @@ class Character < ActiveRecord::Base
   
   has_many :npcs
   has_many :scenes, :through => :npcs
-
+  
+  scope :in_verse,   proc {|in_verse| where(:universe_id => in_verse) }
 end
