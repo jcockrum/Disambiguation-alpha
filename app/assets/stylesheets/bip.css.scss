@@ -1,6 +1,6 @@
 $BG_color_1:#6B8492;  /*#9DD929;*/
-$BG_color_2:#EBEBEB;   /*#DEF3CA; */ 
-       
+$BG_color_2:rgb(245,246,246);;   /*#DEF3CA; */ 
+
 $border_1px:#849699;
 $border_1px_2:#6B8492;
 $border_2px:#E7EFE0;           
@@ -15,7 +15,7 @@ $moz_gradent_2:#697C86;
 $moz_gradent_3:#163341;       
 
 $txt_color_1:#FFF;          
-$txt_color_2:#666;          
+$txt_color_2:#000;          
 $txt_color_3:#9CD009;
 
 $txt_shadow_1:#8F919C;      
@@ -29,6 +29,7 @@ table.table1 {
   line-height: 1.4em;
   margin-left: 5em;
   width: 50em;
+
 }
 
 .table1 {
