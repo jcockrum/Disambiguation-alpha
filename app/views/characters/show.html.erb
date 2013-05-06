@@ -8,7 +8,7 @@
                                     <p><b>Universe: </b><%= @character.universe.name %></p>
                                     <p><b>Name: </b><%= @character.name %></p>
                                     <%= render 'parts/parts' %> 
-                                    <%= link_to 'Back', universe_characters_path(current_universe) %>
+                                    <%= button_to 'Back', universe_characters_path(current_universe) %>
                                 </div><!-- content -->
                             </div><!-- main -->
                             <!-- SIDE 2-->
