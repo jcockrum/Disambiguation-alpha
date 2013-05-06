@@ -5,18 +5,19 @@ This is a tool for generating and testing stories to elevate creative world buil
 h2. Ruby on Rails
 
 This application uses:
-* Ruby version 1.9.3
-* Rails version 3.2.12
-This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.com/.
+* rvm 1.18.15
+* gem 1.8.25
+* ruby 1.9.3p392
+* Rails 3.2.12
+* git version 1.7.9.5
 
+This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.com/.
 
 h2. Database
 
 This application uses MySQL with ActiveRecord.
+* MySQL 5.5.31-0ubuntu0.12.04.1
 
-h2. Documentation and Support
-
-This is the only documentation.
 
 h2. License
 

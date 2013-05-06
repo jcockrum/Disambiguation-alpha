@@ -101,10 +101,10 @@ a:focus > .sf-sub-indicator,a:hover > .sf-sub-indicator,a:active > .sf-sub-indic
 #container-bottom{position:relative;height:80px;width:1050px;margin:0 auto;}
 
 /* left sidebar */
-#main_2col{position:relative;line-height:20px;letter-spacing:normal;color:#000;text-transform:normal;font-size:13px;font-style:normal;width:830px;margin-left:0;font-family:Helvetica, Arial, sans-serif;font-weight:400;float:left;}
+#main_2col{position:relative;line-height:20px;letter-spacing:normal;color:#000;text-transform:normal;font-size:13px;font-style:normal;width:830px;margin-left:0;float:left;}
 #sidebar{position:relative;width:220px;float:left;}
 #sidebar .content{position:relative;margin:0 10px;}
-.sidebox1{letter-spacing:normal;font-style:normal;background-color:transparent;font-weight:400;padding:10px;line-height:20px;color:#404040;text-transform:normal;font-size:12px;font-family:Helvetica, Arial, sans-serif;margin:20px 0;border:1px solid #F0F0F0;background-position:center top;background-image:url(images/css/sidebox1-bg.png);background-repeat:repeat-x;}
+.sidebox1{letter-spacing:normal;font-style:normal;background-color:transparent;font-weight:400;padding:10px;line-height:20px;color:#404040;text-transform:normal;font-size:12px;margin:20px 0;background-image:url('container-sidebar1');background-position:center top;background-repeat:repeat-x;border: 1px solid #F0F0F0; }
 .sidebox1 p a:link,.sidebox1 p a:visited{color:#00E;text-decoration:none;}
 .sidebox1 p a:hover{color:#0E0;}
 .sidebox1 h2{letter-spacing:1px;font-style:normal;background-color:transparent;margin-bottom:15px;font-weight:700;padding:0;line-height:10px;color:#FFF;text-transform:none;font-size:14px;font-family:Arial, sans-serif;border:0;text-shadow:none;background-image:none;background-repeat:no-repeat;}
@@ -113,6 +113,7 @@ a:focus > .sf-sub-indicator,a:hover > .sf-sub-indicator,a:active > .sf-sub-indic
 .sidebox1 .vmenu ul li a:link,.sidebox1 .vmenu ul li a:visited{letter-spacing:normal;color:#333;text-transform:normal;font-style:normal;font-size:12px;font-family:Helvetica, Arial, sans-serif;text-decoration:none;font-weight:400;}
 .sidebox1 .vmenu ul li a:hover{}
 .sidebox1 p{text-align:justify;}
+.sidebox table{width:100%;}
 
 /* 2 sidebars */
 #main_3col{position:relative;line-height:20px;letter-spacing:normal;color:#000;text-transform:normal;font-size:13px;font-style:normal;width:610px;margin-left:0;font-family:Helvetica, Arial, sans-serif;font-weight:400;float:left;}

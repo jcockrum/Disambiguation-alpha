@@ -1,9 +1,21 @@
 <div id="sidebar"><!-- SIDE 1 -->
     <div class="content">
         <div class="sidebox1">
-            <h2>Side Box Menu</h2>
+            <h2>Listing</h2>
             <div class="sidebox1">
-                <h2>Side Box Heading</h2>
+                <h2>Characters</h2>
+                <section>
+                    <table>
+                    <% @universe.characters.each do |character| %>
+                      <tr>
+                        <td><%= link_to character.name, character %></td>
+                    </tr>
+                    <% end %>
+                    </table>
+                </section>
+            </div>
+            <div class="sidebox1">
+                <h2>Locations</h2>
                 <section>
                     
                 </section>
