@@ -1,15 +1,36 @@
 <div id="sidebar"><!-- SIDE 1 -->
     <div class="content">
         <div class="sidebox1">
-            <h2>Side Box Menu</h2>
             <div class="sidebox1">
-                <h2>Side Box Heading</h2>
+                <h2 id="sidebox1">Stories</h2>
                 <section>
-                    <% if content_for?(:recent_universes) %>
-                    <p class='recent'><%= yield :recent_universes %></p>
+                    <ul id="vmenu">
+                    <% @universe.stories.each do |story| %>
+                      <li id="vmenu"><%= link_to story.name, story %></li>
                     <% end %>
+                    </ul>
                 </section>
             </div>
+            <div class="sidebox1">
+                <h2 id="sidebox1">Characters</h2>
+                <section>
+                    <ul id="vmenu">
+                    <% @universe.characters.each do |character| %>
+                      <li id="vmenu"><%= link_to character.name, character %></li>
+                    <% end %>
+                    </ul>
+                </section>
+            </div>
+            <div class="sidebox1">
+                <h2>Locations</h2>
+                <section>
+                    <ul id="vmenu">
+                    <% @universe.locations.each do |location| %>
+                      <li id="vmenu"><%= link_to location.name, location %></li>
+                    <% end %>
+                    </ul>
+                </section>            
+           </div>
         </div>
     </div>
 </div><!-- END SIDE 1 -->

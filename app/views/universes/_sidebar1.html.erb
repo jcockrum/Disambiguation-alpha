@@ -1,25 +1,36 @@
 <div id="sidebar"><!-- SIDE 1 -->
     <div class="content">
         <div class="sidebox1">
-            <h2>Listing</h2>
             <div class="sidebox1">
-                <h2>Characters</h2>
+                <h2 id="sidebox1">Stories</h2>
                 <section>
-                    <table>
-                    <% @universe.characters.each do |character| %>
-                      <tr>
-                        <td><%= link_to character.name, character %></td>
-                    </tr>
+                    <ul id="vmenu">
+                    <% @universe.stories.each do |story| %>
+                      <li id="vmenu"><%= link_to story.name, story %></li>
                     <% end %>
-                    </table>
+                    </ul>
+                </section>
+            </div>
+            <div class="sidebox1">
+                <h2 id="sidebox1">Characters</h2>
+                <section>
+                    <ul id="vmenu">
+                    <% @universe.characters.each do |character| %>
+                      <li id="vmenu"><%= link_to character.name, character %></li>
+                    <% end %>
+                    </ul>
                 </section>
             </div>
             <div class="sidebox1">
                 <h2>Locations</h2>
                 <section>
-                    
-                </section>
-            </div>
+                    <ul id="vmenu">
+                    <% @universe.locations.each do |location| %>
+                      <li id="vmenu"><%= link_to location.name, location %></li>
+                    <% end %>
+                    </ul>
+                </section>            
+           </div>
         </div>
     </div>
 </div><!-- END SIDE 1 -->

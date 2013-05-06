@@ -1,6 +1,7 @@
 
-                            <!--SIDE 1 -->
-                            <div id="main">
+                            <<!--SIDE 2 -->
+                            
+                            <div id="main_2col">
                                 <div class="content">
                                     <h1>The Scene "<%= @scene.name %>"</h1>
                                     <h2>In the "<%= @scene.universe.name %>" Universe</h2>
@@ -11,5 +12,6 @@
                                     <%= link_to 'Back to Scenes', universe_scenes_path(@scene.universe_id) %> | <%= link_to 'Edit', edit_scene_path(@scene) %>
                                 </div><!-- content -->
                             </div><!-- main -->
-                            <!-- SIDE 2-->
+                            <%= render 'scenes/sidebar1' %>
+                            <!-- SIDE 1-->
 
