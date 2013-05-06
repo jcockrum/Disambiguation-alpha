@@ -2,7 +2,7 @@
  
                             <!--SIDE 2 -->
                             
-                            <div id="main_2col">
+                            <div id="main">
                                 <div class="content">
                                     <p id="notice"><%= notice %></p>
                                     <h1>"<%= @story.name %>" in  the "<%= @story.universe.name %>" Universe</h1>
@@ -17,5 +17,5 @@
                                     <%= link_to 'Back', universe_stories_path(current_universe) %> | <%= link_to 'Edit', edit_story_path(@story) %>
                                 </div><!-- content -->
                             </div><!-- main -->
-                            <%= render 'stories/sidebar1' %>
+                            
                             <!-- SIDE 1-->
