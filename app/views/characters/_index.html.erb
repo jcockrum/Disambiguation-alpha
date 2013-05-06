@@ -2,8 +2,8 @@
 
 <section>
     <p>
-        This is to manage all of the 'Who's' in telling a story. Having all of a characters description and a sequence
-        of events of what has happed to that charater will allow authors to make a charater
+        This is to manage all of the 'Who's' in telling a story. Having all of a characters descriptions and a 
+        sequence of events of what has happed to that charater will allow authors to make a charater
         more realistic.
     </p> 
 </section>
@@ -11,7 +11,6 @@
 <table class="table1">
   <tr>
     <th>Name</th>
-    <th>Universe</th>
     <th>Scenes</th>
     <th></th>
     <th></th>
@@ -20,7 +19,6 @@
 <% @characters.each do |character| %>
   <tr>
     <td><%= best_in_place character, :name, :type => :input %></td>
-    <td><%= character.universe.name %></td>
     <td><%= character.scenes.map(&:name).join(", ") %></td>
     <td><%= link_to 'Details', character %></td>
     <td><%= link_to 'Remove', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>

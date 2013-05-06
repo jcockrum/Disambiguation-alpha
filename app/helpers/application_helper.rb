@@ -19,4 +19,5 @@ module ApplicationHelper
 #TODO: Main menu 'active selection' is not working
 #TODO: Add CSS buttons for'new' links - link fails if it is a html button
 #TODO: Add Sub-loccation relationship on locations
+#TODO: add scope limit for the sidebar so that it only displays 5 (or so) of the most recently editied
 end
