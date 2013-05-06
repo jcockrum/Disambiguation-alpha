@@ -12,8 +12,11 @@ module ApplicationHelper
     html.html_safe
   end
   
-#TODO: add title codeand real css for tables
-#TODO: test all links in app
+#TODO: convert the app.css to scss
+#TODO: pick one font for app
 #TODO: add pjax after html is done
-#TODO: add valadation on everything
+#TODO: add valadation
+#TODO: Main menu 'active selection' is not working
+#TODO: Add CSS buttons for'new' links - link fails if it is a html button
+#TODO: Add Sub-loccation relationship on locations
 end
