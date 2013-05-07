@@ -5,10 +5,10 @@
                             <div id="main">
                                 <div class="content">
                                     <p id="notice"><%= notice %></p>
-                                    <p><b>Universe: </b><%= @character.universe.name %></p>
-                                    <p><b>Name: </b><%= @character.name %></p>
+                                    <h2> <%= @character.name %> in the <%= @character.universe.name  %></h2>
+                                    <p><b>Descriptions: </b></p>
                                     <%= render 'parts/parts' %> 
-                                    <%= button_to 'Back', universe_characters_path(current_universe) %>
+                                    <%= link_to 'Back', universe_characters_path(current_universe) %>
                                 </div><!-- content -->
                             </div><!-- main -->
                             <!-- SIDE 2-->

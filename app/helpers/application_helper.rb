@@ -12,12 +12,15 @@ module ApplicationHelper
     html.html_safe
   end
   
+#TODO: setup a changeable scene index in stories
+#TODO: Add Sub-loccation relationship on locations
+
 #TODO: convert the app.css to scss
 #TODO: pick one font for app
-#TODO: add pjax after html is done
 #TODO: add valadation
 #TODO: Main menu 'active selection' is not working
 #TODO: Add CSS buttons for'new' links - link fails if it is a html button
-#TODO: Add Sub-loccation relationship on locations
 #TODO: add scope limit for the sidebar so that it only displays 5 (or so) of the most recently editied
+#TODO: add pjax after html is done
+
 end

@@ -5,8 +5,8 @@
                             <div id="main">
                                 <div class="content">
                                     <p id="notice"><%= notice %></p>
-                                    <p><b>Universe:</b><%= @location.universe.name %></p>
-                                    <p><b>Name:</b><%= @location.name %></p>
+                                    <h2> <%= @location.name %> in the <%= @location.universe.name %></h2>
+                                    <p><b>Descriptions: </b></p>
                                     <%= render 'parts/parts' %> 
                                     <%= link_to 'Back', universe_locations_path(current_universe) %>
                                 </div><!-- content -->

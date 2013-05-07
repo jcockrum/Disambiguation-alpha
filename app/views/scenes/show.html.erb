@@ -1,13 +1,12 @@
 
-                            <<!--SIDE 2 -->
+                            <!--SIDE 2 -->
                             
                             <div id="main">
                                 <div class="content">
-                                    <h1>The Scene "<%= @scene.name %>"</h1>
-                                    <h2>In the "<%= @scene.universe.name %>" Universe</h2>
+                                    <h2>Scene <b><%= @scene.name %></b> in the <b><%= @scene.universe.name %></b> Universe</h2>
                                     <p><b>Characters: </b><%= @scene.characters.map(&:name).join(", ") %></p>
                                     <p><b>Location:    </b><%= @scene.locations.map(&:name).join(", ") %></p>
-                                    
+                                    <p>Content: </p>
                                     <%= render 'parts/parts' %> 
                                     <%= link_to 'Back to Scenes', universe_scenes_path(@scene.universe_id) %> | <%= link_to 'Edit', edit_scene_path(@scene) %>
                                 </div><!-- content -->
